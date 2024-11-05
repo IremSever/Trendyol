@@ -1,0 +1,696 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		666355972CD9E5A9005F0A06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666355962CD9E5A9005F0A06 /* AppDelegate.swift */; };
+		666355992CD9E5A9005F0A06 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666355982CD9E5A9005F0A06 /* SceneDelegate.swift */; };
+		6663559B2CD9E5A9005F0A06 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663559A2CD9E5A9005F0A06 /* ViewController.swift */; };
+		6663559E2CD9E5A9005F0A06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6663559C2CD9E5A9005F0A06 /* Main.storyboard */; };
+		666355A02CD9E5AB005F0A06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6663559F2CD9E5AB005F0A06 /* Assets.xcassets */; };
+		666355A32CD9E5AB005F0A06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 666355A12CD9E5AB005F0A06 /* LaunchScreen.storyboard */; };
+		666355AE2CD9E5AB005F0A06 /* TrendyolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666355AD2CD9E5AB005F0A06 /* TrendyolTests.swift */; };
+		666355B82CD9E5AB005F0A06 /* TrendyolUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666355B72CD9E5AB005F0A06 /* TrendyolUITests.swift */; };
+		666355BA2CD9E5AB005F0A06 /* TrendyolUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666355B92CD9E5AB005F0A06 /* TrendyolUITestsLaunchTests.swift */; };
+		666355CE2CD9F613005F0A06 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666355CD2CD9F613005F0A06 /* HomeViewModel.swift */; };
+		666355D02CD9F627005F0A06 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666355CF2CD9F627005F0A06 /* HomeModel.swift */; };
+		666355D22CD9F67B005F0A06 /* shop.json in Resources */ = {isa = PBXBuildFile; fileRef = 666355D12CD9F67B005F0A06 /* shop.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		666355AA2CD9E5AB005F0A06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6663558B2CD9E5A9005F0A06 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 666355922CD9E5A9005F0A06;
+			remoteInfo = Trendyol;
+		};
+		666355B42CD9E5AB005F0A06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6663558B2CD9E5A9005F0A06 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 666355922CD9E5A9005F0A06;
+			remoteInfo = Trendyol;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		666355932CD9E5A9005F0A06 /* Trendyol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trendyol.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		666355962CD9E5A9005F0A06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		666355982CD9E5A9005F0A06 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6663559A2CD9E5A9005F0A06 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6663559D2CD9E5A9005F0A06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6663559F2CD9E5AB005F0A06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		666355A22CD9E5AB005F0A06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		666355A42CD9E5AB005F0A06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		666355A92CD9E5AB005F0A06 /* TrendyolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrendyolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		666355AD2CD9E5AB005F0A06 /* TrendyolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendyolTests.swift; sourceTree = "<group>"; };
+		666355B32CD9E5AB005F0A06 /* TrendyolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrendyolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		666355B72CD9E5AB005F0A06 /* TrendyolUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendyolUITests.swift; sourceTree = "<group>"; };
+		666355B92CD9E5AB005F0A06 /* TrendyolUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendyolUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		666355CD2CD9F613005F0A06 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		666355CF2CD9F627005F0A06 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		666355D12CD9F67B005F0A06 /* shop.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = shop.json; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		666355902CD9E5A9005F0A06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		666355A62CD9E5AB005F0A06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		666355B02CD9E5AB005F0A06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6663558A2CD9E5A9005F0A06 = {
+			isa = PBXGroup;
+			children = (
+				666355952CD9E5A9005F0A06 /* Trendyol */,
+				666355AC2CD9E5AB005F0A06 /* TrendyolTests */,
+				666355B62CD9E5AB005F0A06 /* TrendyolUITests */,
+				666355942CD9E5A9005F0A06 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		666355942CD9E5A9005F0A06 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				666355932CD9E5A9005F0A06 /* Trendyol.app */,
+				666355A92CD9E5AB005F0A06 /* TrendyolTests.xctest */,
+				666355B32CD9E5AB005F0A06 /* TrendyolUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		666355952CD9E5A9005F0A06 /* Trendyol */ = {
+			isa = PBXGroup;
+			children = (
+				666355CA2CD9F5BA005F0A06 /* JSON */,
+				666355C92CD9F5B1005F0A06 /* Model */,
+				666355C82CD9F5AA005F0A06 /* ViewModel */,
+				666355C72CD9F5A3005F0A06 /* View */,
+				666355C62CD9E5BE005F0A06 /* Application */,
+			);
+			path = Trendyol;
+			sourceTree = "<group>";
+		};
+		666355AC2CD9E5AB005F0A06 /* TrendyolTests */ = {
+			isa = PBXGroup;
+			children = (
+				666355AD2CD9E5AB005F0A06 /* TrendyolTests.swift */,
+			);
+			path = TrendyolTests;
+			sourceTree = "<group>";
+		};
+		666355B62CD9E5AB005F0A06 /* TrendyolUITests */ = {
+			isa = PBXGroup;
+			children = (
+				666355B72CD9E5AB005F0A06 /* TrendyolUITests.swift */,
+				666355B92CD9E5AB005F0A06 /* TrendyolUITestsLaunchTests.swift */,
+			);
+			path = TrendyolUITests;
+			sourceTree = "<group>";
+		};
+		666355C62CD9E5BE005F0A06 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				666355962CD9E5A9005F0A06 /* AppDelegate.swift */,
+				666355982CD9E5A9005F0A06 /* SceneDelegate.swift */,
+				6663559F2CD9E5AB005F0A06 /* Assets.xcassets */,
+				666355A42CD9E5AB005F0A06 /* Info.plist */,
+				666355A12CD9E5AB005F0A06 /* LaunchScreen.storyboard */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		666355C72CD9F5A3005F0A06 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				666355CB2CD9F5CF005F0A06 /* Home */,
+				666355CC2CD9F5D7005F0A06 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		666355C82CD9F5AA005F0A06 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				666355CD2CD9F613005F0A06 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		666355C92CD9F5B1005F0A06 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				666355CF2CD9F627005F0A06 /* HomeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		666355CA2CD9F5BA005F0A06 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				666355D12CD9F67B005F0A06 /* shop.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		666355CB2CD9F5CF005F0A06 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				6663559A2CD9E5A9005F0A06 /* ViewController.swift */,
+				6663559C2CD9E5A9005F0A06 /* Main.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		666355CC2CD9F5D7005F0A06 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		666355922CD9E5A9005F0A06 /* Trendyol */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 666355BD2CD9E5AB005F0A06 /* Build configuration list for PBXNativeTarget "Trendyol" */;
+			buildPhases = (
+				6663558F2CD9E5A9005F0A06 /* Sources */,
+				666355902CD9E5A9005F0A06 /* Frameworks */,
+				666355912CD9E5A9005F0A06 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Trendyol;
+			productName = Trendyol;
+			productReference = 666355932CD9E5A9005F0A06 /* Trendyol.app */;
+			productType = "com.apple.product-type.application";
+		};
+		666355A82CD9E5AB005F0A06 /* TrendyolTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 666355C02CD9E5AB005F0A06 /* Build configuration list for PBXNativeTarget "TrendyolTests" */;
+			buildPhases = (
+				666355A52CD9E5AB005F0A06 /* Sources */,
+				666355A62CD9E5AB005F0A06 /* Frameworks */,
+				666355A72CD9E5AB005F0A06 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				666355AB2CD9E5AB005F0A06 /* PBXTargetDependency */,
+			);
+			name = TrendyolTests;
+			productName = TrendyolTests;
+			productReference = 666355A92CD9E5AB005F0A06 /* TrendyolTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		666355B22CD9E5AB005F0A06 /* TrendyolUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 666355C32CD9E5AB005F0A06 /* Build configuration list for PBXNativeTarget "TrendyolUITests" */;
+			buildPhases = (
+				666355AF2CD9E5AB005F0A06 /* Sources */,
+				666355B02CD9E5AB005F0A06 /* Frameworks */,
+				666355B12CD9E5AB005F0A06 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				666355B52CD9E5AB005F0A06 /* PBXTargetDependency */,
+			);
+			name = TrendyolUITests;
+			productName = TrendyolUITests;
+			productReference = 666355B32CD9E5AB005F0A06 /* TrendyolUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6663558B2CD9E5A9005F0A06 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					666355922CD9E5A9005F0A06 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					666355A82CD9E5AB005F0A06 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 666355922CD9E5A9005F0A06;
+					};
+					666355B22CD9E5AB005F0A06 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 666355922CD9E5A9005F0A06;
+					};
+				};
+			};
+			buildConfigurationList = 6663558E2CD9E5A9005F0A06 /* Build configuration list for PBXProject "Trendyol" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6663558A2CD9E5A9005F0A06;
+			productRefGroup = 666355942CD9E5A9005F0A06 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				666355922CD9E5A9005F0A06 /* Trendyol */,
+				666355A82CD9E5AB005F0A06 /* TrendyolTests */,
+				666355B22CD9E5AB005F0A06 /* TrendyolUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		666355912CD9E5A9005F0A06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				666355A32CD9E5AB005F0A06 /* LaunchScreen.storyboard in Resources */,
+				666355A02CD9E5AB005F0A06 /* Assets.xcassets in Resources */,
+				6663559E2CD9E5A9005F0A06 /* Main.storyboard in Resources */,
+				666355D22CD9F67B005F0A06 /* shop.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		666355A72CD9E5AB005F0A06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		666355B12CD9E5AB005F0A06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6663558F2CD9E5A9005F0A06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6663559B2CD9E5A9005F0A06 /* ViewController.swift in Sources */,
+				666355972CD9E5A9005F0A06 /* AppDelegate.swift in Sources */,
+				666355992CD9E5A9005F0A06 /* SceneDelegate.swift in Sources */,
+				666355D02CD9F627005F0A06 /* HomeModel.swift in Sources */,
+				666355CE2CD9F613005F0A06 /* HomeViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		666355A52CD9E5AB005F0A06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				666355AE2CD9E5AB005F0A06 /* TrendyolTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		666355AF2CD9E5AB005F0A06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				666355BA2CD9E5AB005F0A06 /* TrendyolUITestsLaunchTests.swift in Sources */,
+				666355B82CD9E5AB005F0A06 /* TrendyolUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		666355AB2CD9E5AB005F0A06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 666355922CD9E5A9005F0A06 /* Trendyol */;
+			targetProxy = 666355AA2CD9E5AB005F0A06 /* PBXContainerItemProxy */;
+		};
+		666355B52CD9E5AB005F0A06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 666355922CD9E5A9005F0A06 /* Trendyol */;
+			targetProxy = 666355B42CD9E5AB005F0A06 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6663559C2CD9E5A9005F0A06 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6663559D2CD9E5A9005F0A06 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		666355A12CD9E5AB005F0A06 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				666355A22CD9E5AB005F0A06 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		666355BB2CD9E5AB005F0A06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		666355BC2CD9E5AB005F0A06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		666355BE2CD9E5AB005F0A06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Trendyol/IApplication/nfo.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iremsever.Trendyol;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		666355BF2CD9E5AB005F0A06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Trendyol/IApplication/nfo.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iremsever.Trendyol;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		666355C12CD9E5AB005F0A06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iremsever.TrendyolTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Trendyol.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Trendyol";
+			};
+			name = Debug;
+		};
+		666355C22CD9E5AB005F0A06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iremsever.TrendyolTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Trendyol.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Trendyol";
+			};
+			name = Release;
+		};
+		666355C42CD9E5AB005F0A06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iremsever.TrendyolUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Trendyol;
+			};
+			name = Debug;
+		};
+		666355C52CD9E5AB005F0A06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iremsever.TrendyolUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Trendyol;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6663558E2CD9E5A9005F0A06 /* Build configuration list for PBXProject "Trendyol" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				666355BB2CD9E5AB005F0A06 /* Debug */,
+				666355BC2CD9E5AB005F0A06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		666355BD2CD9E5AB005F0A06 /* Build configuration list for PBXNativeTarget "Trendyol" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				666355BE2CD9E5AB005F0A06 /* Debug */,
+				666355BF2CD9E5AB005F0A06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		666355C02CD9E5AB005F0A06 /* Build configuration list for PBXNativeTarget "TrendyolTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				666355C12CD9E5AB005F0A06 /* Debug */,
+				666355C22CD9E5AB005F0A06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		666355C32CD9E5AB005F0A06 /* Build configuration list for PBXNativeTarget "TrendyolUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				666355C42CD9E5AB005F0A06 /* Debug */,
+				666355C52CD9E5AB005F0A06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6663558B2CD9E5A9005F0A06 /* Project object */;
+}
