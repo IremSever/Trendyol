@@ -1,2 +1,2 @@
-# Shoppe
-E-shop
+# Trendyol
+Home Page - Clone
