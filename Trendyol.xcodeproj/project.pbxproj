@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		666355972CD9E5A9005F0A06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666355962CD9E5A9005F0A06 /* AppDelegate.swift */; };
 		666355992CD9E5A9005F0A06 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666355982CD9E5A9005F0A06 /* SceneDelegate.swift */; };
-		6663559B2CD9E5A9005F0A06 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663559A2CD9E5A9005F0A06 /* ViewController.swift */; };
+		6663559B2CD9E5A9005F0A06 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663559A2CD9E5A9005F0A06 /* HomeViewController.swift */; };
 		6663559E2CD9E5A9005F0A06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6663559C2CD9E5A9005F0A06 /* Main.storyboard */; };
 		666355A02CD9E5AB005F0A06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6663559F2CD9E5AB005F0A06 /* Assets.xcassets */; };
 		666355A32CD9E5AB005F0A06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 666355A12CD9E5AB005F0A06 /* LaunchScreen.storyboard */; };
@@ -19,6 +19,16 @@
 		666355CE2CD9F613005F0A06 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666355CD2CD9F613005F0A06 /* HomeViewModel.swift */; };
 		666355D02CD9F627005F0A06 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666355CF2CD9F627005F0A06 /* HomeModel.swift */; };
 		666355D22CD9F67B005F0A06 /* shop.json in Resources */ = {isa = PBXBuildFile; fileRef = 666355D12CD9F67B005F0A06 /* shop.json */; };
+		66E08EAD2CDA3A2100215D3A /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E08EAB2CDA3A2100215D3A /* CategoryCell.swift */; };
+		66E08EAE2CDA3A2100215D3A /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66E08EAC2CDA3A2100215D3A /* CategoryCell.xib */; };
+		66E08EB42CDA3BE900215D3A /* BannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E08EB22CDA3BE900215D3A /* BannerCell.swift */; };
+		66E08EB52CDA3BE900215D3A /* BannerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66E08EB32CDA3BE900215D3A /* BannerCell.xib */; };
+		66E08EB82CDA3BFC00215D3A /* CouponCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E08EB62CDA3BFC00215D3A /* CouponCell.swift */; };
+		66E08EB92CDA3BFC00215D3A /* CouponCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66E08EB72CDA3BFC00215D3A /* CouponCell.xib */; };
+		66E08EBF2CDA3C8F00215D3A /* PopularCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E08EBD2CDA3C8F00215D3A /* PopularCell.swift */; };
+		66E08EC02CDA3C8F00215D3A /* PopularCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66E08EBE2CDA3C8F00215D3A /* PopularCell.xib */; };
+		66EC355C2CDA596E00F523EA /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC355A2CDA596E00F523EA /* ProductCell.swift */; };
+		66EC355D2CDA596E00F523EA /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66EC355B2CDA596E00F523EA /* ProductCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +52,7 @@
 		666355932CD9E5A9005F0A06 /* Trendyol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trendyol.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		666355962CD9E5A9005F0A06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		666355982CD9E5A9005F0A06 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6663559A2CD9E5A9005F0A06 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6663559A2CD9E5A9005F0A06 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6663559D2CD9E5A9005F0A06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6663559F2CD9E5AB005F0A06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		666355A22CD9E5AB005F0A06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,6 +65,16 @@
 		666355CD2CD9F613005F0A06 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		666355CF2CD9F627005F0A06 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		666355D12CD9F67B005F0A06 /* shop.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = shop.json; sourceTree = "<group>"; };
+		66E08EAB2CDA3A2100215D3A /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		66E08EAC2CDA3A2100215D3A /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
+		66E08EB22CDA3BE900215D3A /* BannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCell.swift; sourceTree = "<group>"; };
+		66E08EB32CDA3BE900215D3A /* BannerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerCell.xib; sourceTree = "<group>"; };
+		66E08EB62CDA3BFC00215D3A /* CouponCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponCell.swift; sourceTree = "<group>"; };
+		66E08EB72CDA3BFC00215D3A /* CouponCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CouponCell.xib; sourceTree = "<group>"; };
+		66E08EBD2CDA3C8F00215D3A /* PopularCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCell.swift; sourceTree = "<group>"; };
+		66E08EBE2CDA3C8F00215D3A /* PopularCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularCell.xib; sourceTree = "<group>"; };
+		66EC355A2CDA596E00F523EA /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		66EC355B2CDA596E00F523EA /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,11 +125,11 @@
 		666355952CD9E5A9005F0A06 /* Trendyol */ = {
 			isa = PBXGroup;
 			children = (
+				666355C62CD9E5BE005F0A06 /* Application */,
 				666355CA2CD9F5BA005F0A06 /* JSON */,
 				666355C92CD9F5B1005F0A06 /* Model */,
 				666355C82CD9F5AA005F0A06 /* ViewModel */,
 				666355C72CD9F5A3005F0A06 /* View */,
-				666355C62CD9E5BE005F0A06 /* Application */,
 			);
 			path = Trendyol;
 			sourceTree = "<group>";
@@ -179,7 +199,7 @@
 		666355CB2CD9F5CF005F0A06 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				6663559A2CD9E5A9005F0A06 /* ViewController.swift */,
+				6663559A2CD9E5A9005F0A06 /* HomeViewController.swift */,
 				6663559C2CD9E5A9005F0A06 /* Main.storyboard */,
 			);
 			path = Home;
@@ -188,8 +208,58 @@
 		666355CC2CD9F5D7005F0A06 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				66E08EAF2CDA3A2700215D3A /* Category */,
+				66E08EB02CDA3A3800215D3A /* Banner */,
+				66E08EB12CDA3A6100215D3A /* Coupon */,
+				66E08EBA2CDA3C0100215D3A /* ProductCell */,
+				66E08EBC2CDA3C5000215D3A /* PopularCell */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		66E08EAF2CDA3A2700215D3A /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				66E08EAB2CDA3A2100215D3A /* CategoryCell.swift */,
+				66E08EAC2CDA3A2100215D3A /* CategoryCell.xib */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		66E08EB02CDA3A3800215D3A /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				66E08EB22CDA3BE900215D3A /* BannerCell.swift */,
+				66E08EB32CDA3BE900215D3A /* BannerCell.xib */,
+			);
+			path = Banner;
+			sourceTree = "<group>";
+		};
+		66E08EB12CDA3A6100215D3A /* Coupon */ = {
+			isa = PBXGroup;
+			children = (
+				66E08EB62CDA3BFC00215D3A /* CouponCell.swift */,
+				66E08EB72CDA3BFC00215D3A /* CouponCell.xib */,
+			);
+			path = Coupon;
+			sourceTree = "<group>";
+		};
+		66E08EBA2CDA3C0100215D3A /* ProductCell */ = {
+			isa = PBXGroup;
+			children = (
+				66EC355A2CDA596E00F523EA /* ProductCell.swift */,
+				66EC355B2CDA596E00F523EA /* ProductCell.xib */,
+			);
+			path = ProductCell;
+			sourceTree = "<group>";
+		};
+		66E08EBC2CDA3C5000215D3A /* PopularCell */ = {
+			isa = PBXGroup;
+			children = (
+				66E08EBD2CDA3C8F00215D3A /* PopularCell.swift */,
+				66E08EBE2CDA3C8F00215D3A /* PopularCell.xib */,
+			);
+			path = PopularCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,8 +366,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66EC355D2CDA596E00F523EA /* ProductCell.xib in Resources */,
+				66E08EAE2CDA3A2100215D3A /* CategoryCell.xib in Resources */,
+				66E08EB52CDA3BE900215D3A /* BannerCell.xib in Resources */,
 				666355A32CD9E5AB005F0A06 /* LaunchScreen.storyboard in Resources */,
+				66E08EC02CDA3C8F00215D3A /* PopularCell.xib in Resources */,
 				666355A02CD9E5AB005F0A06 /* Assets.xcassets in Resources */,
+				66E08EB92CDA3BFC00215D3A /* CouponCell.xib in Resources */,
 				6663559E2CD9E5A9005F0A06 /* Main.storyboard in Resources */,
 				666355D22CD9F67B005F0A06 /* shop.json in Resources */,
 			);
@@ -324,11 +399,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6663559B2CD9E5A9005F0A06 /* ViewController.swift in Sources */,
+				66E08EB42CDA3BE900215D3A /* BannerCell.swift in Sources */,
+				6663559B2CD9E5A9005F0A06 /* HomeViewController.swift in Sources */,
 				666355972CD9E5A9005F0A06 /* AppDelegate.swift in Sources */,
 				666355992CD9E5A9005F0A06 /* SceneDelegate.swift in Sources */,
 				666355D02CD9F627005F0A06 /* HomeModel.swift in Sources */,
 				666355CE2CD9F613005F0A06 /* HomeViewModel.swift in Sources */,
+				66E08EBF2CDA3C8F00215D3A /* PopularCell.swift in Sources */,
+				66EC355C2CDA596E00F523EA /* ProductCell.swift in Sources */,
+				66E08EAD2CDA3A2100215D3A /* CategoryCell.swift in Sources */,
+				66E08EB82CDA3BFC00215D3A /* CouponCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,7 +591,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Trendyol/IApplication/nfo.plist;
+				INFOPLIST_FILE = Trendyol/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -541,7 +621,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Trendyol/IApplication/nfo.plist;
+				INFOPLIST_FILE = Trendyol/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
