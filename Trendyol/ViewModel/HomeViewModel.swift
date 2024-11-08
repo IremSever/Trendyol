@@ -25,31 +25,11 @@ class HomeViewModel {
         }
     }
     
-    func getItems() -> [Item] {
-        return homeData?.list.first?.items ?? []
+    func getCategories() -> [Category]? {
+        return homeData?.list.first?.items.flatMap { $0.categories ?? [] }
+    }
+    func getProducts() -> [Product]? {
+        return homeData?.list.first?.items.flatMap { $0.products ?? [] }
     }
     
-    func getCategories(for item: Item) -> [Category] {
-        return item.categories ?? []
-    }
-    
-    func getBanners(for item: Item) -> [Banner] {
-        return item.banners ?? []
-    }
-    
-    func getServices(for item: Item) -> [Service] {
-        return item.services ?? []
-    }
-    
-    func getPromotion(for item: Item) -> Promotion? {
-        return item.promotion
-    }
-    
-    func getCoupons(for item: Item) -> [Coupon] {
-        return item.coupons ?? []
-    }
-    
-    func getProducts(for item: Item) -> [Product] {
-        return item.products ?? []
-    }
 }
