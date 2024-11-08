@@ -1,213 +1,197 @@
 {
-    "list": [
+    "items": [
         {
-            "items": [
+            "title": "Our Categories",
+            "backgroundColor": "#F0F0F0",
+            "categories": [
                 {
-                    "title": "",
-                    "backgroundColor": "",
-                    "categories": [
-                        {
-                            "id": 1,
-                            "name": "Women",
-                            "image": "women_category_image.png",
-                            "url": "/categories/women",
-                            "backgroundColor": ""
-                        },
-                        {
-                            "id": 2,
-                            "name": "Men",
-                            "image": "men_category_image.png",
-                            "url": "/categories/men",
-                            "backgroundColor": ""
-                        },
-                        {
-                            "id": 3,
-                            "name": "Fashion",
-                            "image": "fashion_category_image.png",
-                            "url": "/categories/fashion",
-                            "backgroundColor": ""
-                        }
-                    ],
-                    "template": "a modul"
-                },
-                {
-                    "title": "",
-                    "backgroundColor": "#FFFFFF",
-                    "banners": [
-                        {
-                            "image": "super_sale_banner1.png",
-                            "text": "SUPER SALE DAYS",
-                            "date": "November 6-11",
-                            "campaignDetails": "Up to 50% discount on selected products!",
-                            "backgroundColor": ""
-                        },
-                        {
-                            "image": "new_year_banner.png",
-                            "text": "New Year Special Offers",
-                            "date": "December 25 - January 1",
-                            "campaignDetails": "30% off on special holiday gifts!",
-                            "backgroundColor": ""
-                        },
-                        {
-                            "image": "valentines_banner.png",
-                            "text": "Valentine's Day Sale",
-                            "date": "February 10-14",
-                            "campaignDetails": "40% discount on romantic gifts.",
-                            "backgroundColor": ""
-                        }
-                    ],
-                    "template": "b modul"
-                },
-                {
-                    "title": "Discover Our Services",
-                    "backgroundColor": "",
-                    "services": [
-                        {
-                            "id": 1,
-                            "name": "Quick Market",
-                            "icon": "market_icon.png",
-                            "info": "30 MIN",
-                            "infoColor": "",
-                            "link": "/services/quick-market"
-                        },
-                        {
-                            "id": 2,
-                            "name": "Food Delivery",
-                            "icon": "food_icon.png",
-                            "info": "81 CITIES",
-                            "infoColor": "",
-                            "link": "/services/food-delivery"
-                        },
-                        {
-                            "id": 3,
-                            "name": "Early Deals",
-                            "icon": "early_deals_icon.png",
-                            "info": "",
-                            "infoColor": "",
-                            "link": "/services/early-deals"
-                        }
-                    ],
-                    "template": "c modul"
-                },
-                {
-                    "title": "Watch Live, Win Rewards!",
-                    "backgroundColor": "",
-                    "promotion": {
-                        "text": "Win a chance to enter the draw!",
-                        "image": "raffle_banner.png",
-                        "value": "Prizes worth over 3,000,000 TL in total"
-                    },
-                    "template": "d modul"
-                },
-                {
-                    "title": "Your Coupons",
-                    "backgroundColor": "",
-                    "coupons": [
-                        {
-                            "icon": "coupon_icon1.png",
-                            "title": "Welcome Coupon",
-                            "availableCoupons": [
-                                {
-                                    "amount": "50 TL",
-                                    "minimumPurchase": "Min. 250 TL purchase",
-                                    "expirationDate": "Expires on 2023-12-31"
-                                },
-                                {
-                                    "amount": "75 TL",
-                                    "minimumPurchase": "Min. 400 TL purchase",
-                                    "expirationDate": "Expires on 2024-01-15"
-                                }
-                            ]
-                        },
-                        {
-                            "icon": "coupon_icon2.png",
-                            "title": "Holiday Specials",
-                            "availableCoupons": [
-                                {
-                                    "amount": "20% Off",
-                                    "minimumPurchase": "No minimum purchase",
-                                    "expirationDate": "Expires on 2023-12-25"
-                                },
-                                {
-                                    "amount": "150 TL",
-                                    "minimumPurchase": "Min. 1000 TL purchase",
-                                    "expirationDate": "Expires on 2024-01-01"
-                                }
-                            ]
-                        },
-                        {
-                            "icon": "coupon_icon3.png",
-                            "title": "Loyalty Rewards",
-                            "availableCoupons": [
-                                {
-                                    "amount": "100 TL",
-                                    "minimumPurchase": "Min. 500 TL purchase",
-                                    "expirationDate": "Expires on 2024-03-31"
-                                }
-                            ]
-                        }
-                    ],
-                    "template": "e modul"
-                },
-                {
-                    "title": "Special Products for You",
-                    "backgroundColor": "",
+                    "id": 1,
+                    "name": "Women",
+                    "image": "women_category_image.png",
+                    "url": "/categories/women",
+                    "backgroundColor": "#FFE0E0",
                     "products": [
                         {
                             "id": 1,
-                            "name": "Zara Ecru Plush Sweater",
-                            "description": "Soft and warm plush sweater. Ideal for daily comfort.",
-                            "price": 249,
-                            "originalPrice": 300,
-                            "discount": 17,
+                            "name": "Women’s Leather Jacket",
+                            "description": "Stylish and warm leather jacket.",
+                            "price": 199.99,
+                            "originalPrice": 250.00,
+                            "discount": 20,
+                            "isPromotion": true,
+                            "promotionPrice": 179.99,
                             "category": "Clothing",
-                            "brand": "Zara",
-                            "rating": 4.2,
-                            "reviewsCount": 60,
-                            "stockStatus": "Out of Stock",
-                            "stickerIconImage": "bestseller.jpeg",
+                            "brand": "LeatherCo",
+                            "rating": 4.5,
+                            "reviewsCount": 120,
+                            "stockStatus": "In Stock",
+                            "stickerIconImage": "promo.jpeg",
                             "flashSale": true,
                             "favoriteExclusive": false,
+                            "popularCampaign": true,
+                            "attributes": {
+                                "material": "Genuine Leather",
+                                "color": "Black",
+                                "sizes": ["S", "M", "L"],
+                                "fit": "Slim Fit"
+                            }
+                        },
+                        {
+                            "id": 2,
+                            "name": "Women’s Running Shoes",
+                            "description": "Comfortable and durable running shoes.",
+                            "price": 89.99,
+                            "originalPrice": 120.00,
+                            "discount": 25,
+                            "isPromotion": false,
+                            "promotionPrice": 0,
+                            "category": "Footwear",
+                            "brand": "RunFast",
+                            "rating": 4.7,
+                            "reviewsCount": 200,
+                            "stockStatus": "In Stock",
+                            "stickerIconImage": "bestseller.jpeg",
+                            "flashSale": false,
+                            "favoriteExclusive": true,
                             "popularCampaign": false,
                             "attributes": {
-                                "material": "Polyester",
-                                "color": "Ecru",
-                                "materialComposition": "80% Polyester, 20% Acrylic",
-                                "washingInstructions": "Wash at a maximum of 30°C",
-                                "beltStatus": "No belt",
-                                "silhouette": "Oversized",
-                                "length": "Medium",
-                                "pockets": "With pockets",
-                                "sleeveLength": "Long Sleeve",
-                                "neckType": "Round Neck",
-                                "age": "Adult",
-                                "packageContent": "1 Sweater",
-                                "sustainabilityDetails": "Contains recycled polyester",
-                                "fit": "Loose Fit",
-                                "productType": "Sweater",
-                                "liningStatus": "Unlined",
-                                "fabricType": "Plush",
-                                "sizes": ["S", "M", "L"]
-                            },
-                            "reviews": [
-                                {
-                                    "username": "Alice",
-                                    "rating": 5,
-                                    "comment": "Very comfortable and warm!",
-                                    "date": "2023-10-05"
-                                },
-                                {
-                                    "username": "John",
-                                    "rating": 4,
-                                    "comment": "A bit oversized, but great quality.",
-                                    "date": "2023-10-12"
-                                }
-                            ]
+                                "material": "Synthetic",
+                                "color": "White",
+                                "sizes": ["6", "7", "8"],
+                                "fit": "Regular Fit"
+                            }
                         }
-                    ],
-                    "template": "f modul"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Men",
+                    "image": "men_category_image.png",
+                    "url": "/categories/men",
+                    "backgroundColor": "#E0E0FF",
+                    "products": [
+                        {
+                            "id": 4,
+                            "name": "Men’s Slim Fit Jeans",
+                            "description": "Classic slim fit jeans for everyday wear.",
+                            "price": 59.99,
+                            "originalPrice": 80.00,
+                            "discount": 25,
+                            "isPromotion": false,
+                            "promotionPrice": 0,
+                            "category": "Clothing",
+                            "brand": "DenimWear",
+                            "rating": 4.6,
+                            "reviewsCount": 150,
+                            "stockStatus": "In Stock",
+                            "stickerIconImage": "bestseller.jpeg",
+                            "flashSale": false,
+                            "favoriteExclusive": true,
+                            "popularCampaign": false,
+                            "attributes": {
+                                "material": "Cotton Blend",
+                                "color": "Blue",
+                                "sizes": ["M", "L", "XL"],
+                                "fit": "Slim Fit"
+                            }
+                        }
+                    ]
                 }
-            ]
+            ],
+            "template": "a modul"
+        },
+        {
+            "title": "",
+            "backgroundColor": "#FFFFFF",
+            "banners": [
+                {
+                    "image": "super_sale_banner1.png",
+                    "text": "SUPER SALE DAYS",
+                    "date": "November 6-11",
+                    "campaignDetails": "Up to 50% discount on selected products!",
+                    "backgroundColor": "#FFEEEE"
+                },
+                {
+                    "image": "new_year_banner.png",
+                    "text": "New Year Special Offers",
+                    "date": "December 25 - January 1",
+                    "campaignDetails": "30% off on special holiday gifts!",
+                    "backgroundColor": "#EEEFFF"
+                }
+            ],
+            "template": "b modul"
+        },
+        {
+            "title": "Discover Our Services",
+            "backgroundColor": "#EFEFEF",
+            "services": [
+                {
+                    "id": 1,
+                    "name": "Quick Market",
+                    "icon": "market_icon.png",
+                    "info": "30 MIN",
+                    "infoColor": "#FFCC00",
+                    "link": "/services/quick-market"
+                },
+                {
+                    "id": 2,
+                    "name": "Food Delivery",
+                    "icon": "food_icon.png",
+                    "info": "81 CITIES",
+                    "infoColor": "#00CCFF",
+                    "link": "/services/food-delivery"
+                }
+            ],
+            "template": "c modul"
+        },
+        {
+            "title": "Watch Live, Win Rewards!",
+            "backgroundColor": "#FFFFCC",
+            "promotion": [ {
+                "text": "Win a chance to enter the draw!",
+                "image": "raffle_banner.png",
+                "value": "Prizes worth over 3,000,000 TL in total"
+            } ],
+            "template": "d modul"
+        },
+        {
+            "title": "Your Coupons",
+            "backgroundColor": "#FFFAE0",
+            "coupons": [
+                {
+                    "icon": "coupon_icon1.png",
+                    "title": "Welcome Coupon",
+                    "availableCoupons": [
+                        {
+                            "amount": "50 TL",
+                            "minimumPurchase": "Min. 250 TL purchase",
+                            "expirationDate": "Expires on 2023-12-31"
+                        },
+                        {
+                            "amount": "75 TL",
+                            "minimumPurchase": "Min. 400 TL purchase",
+                            "expirationDate": "Expires on 2024-01-15"
+                        }
+                    ]
+                },
+                {
+                    "icon": "coupon_icon2.png",
+                    "title": "Holiday Specials",
+                    "availableCoupons": [
+                        {
+                            "amount": "20% Off",
+                            "minimumPurchase": "No minimum purchase",
+                            "expirationDate": "Expires on 2023-12-25"
+                        },  
+                        {
+                            "amount": "50% Off",
+                            "minimumPurchase": "Min. 400 TL purchase",
+                            "expirationDate": "Expires on 2023-12-25"
+                        }
+                    ]
+                }
+            ],
+            "template": "e modul"
         }
     ]
 }

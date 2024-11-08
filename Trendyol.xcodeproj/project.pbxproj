@@ -31,6 +31,7 @@
 		66E08EC02CDA3C8F00215D3A /* PopularCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66E08EBE2CDA3C8F00215D3A /* PopularCell.xib */; };
 		66EC355C2CDA596E00F523EA /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EC355A2CDA596E00F523EA /* ProductCell.swift */; };
 		66EC355D2CDA596E00F523EA /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66EC355B2CDA596E00F523EA /* ProductCell.xib */; };
+		66FC2AE42CDE3BDA0049E04F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FC2AE32CDE3BDA0049E04F /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		66E08EBE2CDA3C8F00215D3A /* PopularCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularCell.xib; sourceTree = "<group>"; };
 		66EC355A2CDA596E00F523EA /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		66EC355B2CDA596E00F523EA /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
+		66FC2AE32CDE3BDA0049E04F /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 		666355952CD9E5A9005F0A06 /* Trendyol */ = {
 			isa = PBXGroup;
 			children = (
+				66FC2AE22CDE3BCF0049E04F /* Utilities */,
 				666355C62CD9E5BE005F0A06 /* Application */,
 				666355CA2CD9F5BA005F0A06 /* JSON */,
 				666355C92CD9F5B1005F0A06 /* Model */,
@@ -221,14 +224,22 @@
 		666355CC2CD9F5D7005F0A06 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				667D406C2CDE473400FEEACB /* Categories */,
 				61F20FEE2CDB906A001140F2 /* Search Bar */,
 				66E08EAF2CDA3A2700215D3A /* Category */,
 				66E08EB02CDA3A3800215D3A /* Banner */,
 				66E08EB12CDA3A6100215D3A /* Coupon */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		667D406C2CDE473400FEEACB /* Categories */ = {
+			isa = PBXGroup;
+			children = (
 				66E08EBA2CDA3C0100215D3A /* ProductCell */,
 				66E08EBC2CDA3C5000215D3A /* PopularCell */,
 			);
-			path = Cell;
+			path = Categories;
 			sourceTree = "<group>";
 		};
 		66E08EAF2CDA3A2700215D3A /* Category */ = {
@@ -274,6 +285,14 @@
 				66E08EBE2CDA3C8F00215D3A /* PopularCell.xib */,
 			);
 			path = PopularCell;
+			sourceTree = "<group>";
+		};
+		66FC2AE22CDE3BCF0049E04F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				66FC2AE32CDE3BDA0049E04F /* Colors.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -415,6 +434,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66E08EB42CDA3BE900215D3A /* BannerCell.swift in Sources */,
+				66FC2AE42CDE3BDA0049E04F /* Colors.swift in Sources */,
 				6663559B2CD9E5A9005F0A06 /* HomeViewController.swift in Sources */,
 				666355972CD9E5A9005F0A06 /* AppDelegate.swift in Sources */,
 				666355992CD9E5A9005F0A06 /* SceneDelegate.swift in Sources */,

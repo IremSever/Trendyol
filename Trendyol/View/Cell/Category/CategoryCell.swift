@@ -20,9 +20,7 @@ class CategoryCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        viewBg.layer.cornerRadius = 10
-        viewBg.layer.masksToBounds = true
-        
+
         viewButton.layer.cornerRadius = 10
         viewButton.layer.masksToBounds = true
         viewButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
@@ -30,11 +28,8 @@ class CategoryCell: UICollectionViewCell {
     
     func configure(with category: Category, isInitiallySelected: Bool = false) {
         lblCategory.text = category.name
-        if let colorHex = category.backgroundColor {
-            viewBg.backgroundColor = UIColor(named: colorHex)
-        } else {
-            viewBg.backgroundColor = .gray
-        }
+
+        viewBg.backgroundColor = UIColor(hex: category.backgroundColor) ?? .clear
         
         self.isSelected = isInitiallySelected
         updateSelectionStyle()
@@ -59,8 +54,10 @@ class CategoryCell: UICollectionViewCell {
         }
     }
     
+    
     @objc private func buttonTapped() {
         if let index = index {
+            print(index)
             delegate?.didSelectCategory(at: index)
         }
     }

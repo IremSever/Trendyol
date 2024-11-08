@@ -11,6 +11,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     @IBOutlet weak var collectionViewCategories: UICollectionView!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    
     private var viewModel = HomeViewModel()
     
     private var categories: [Category] = []
@@ -21,15 +22,10 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         super.viewDidLoad()
         
         setupCollectionViews()
-        loadCategories()
-        
-        let firstIndexPath = IndexPath(item: 0, section: 0)
-        collectionViewCategories.selectItem(at: firstIndexPath, animated: false, scrollPosition: [])
-        //            collectionViewCategories(collectionViewCategories, didSelectItemAt: firstIndexPath)
+        loadData()
     }
     
     private func setupCollectionViews() {
-        // Delegate ve DataSource atamaları
         collectionViewCategories.delegate = self
         collectionViewCategories.dataSource = self
         collectionView.delegate = self
@@ -39,62 +35,46 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func registerCells() {
-        // Hücreleri iki koleksiyon görünümü için de kaydediyoruz
+        //           collectionViewCategories.register(UINib(nibName: "SearchCell", bundle: nil), forCellWithReuseIdentifier: "SearchCell")
         collectionViewCategories.register(UINib(nibName: "CategoryCell", bundle: nil), forCellWithReuseIdentifier: "CategoryCell")
-        collectionView.register(UINib(nibName: "ContentCell", bundle: nil), forCellWithReuseIdentifier: "ContentCell")
+        collectionView.register(UINib(nibName: "ProductCell", bundle: nil), forCellWithReuseIdentifier: "ProductCell")
     }
     
-    private func loadCategories() {
-        // Kategori verilerini yükleme
-        viewModel.loadHomeData()
-        if let loadedCategories = viewModel.getCategories() {
-            self.categories = loadedCategories
-            self.collectionViewCategories.reloadData()
-            loadContentForSelectedCategory(index: 0)
+    private func loadData() {
+        viewModel.loadHomeData { [weak self] in
+            DispatchQueue.main.async {
+                self?.collectionViewCategories.reloadData()
+                self?.collectionView.reloadData()
+            }
         }
     }
     
     private func loadContentForSelectedCategory(index: Int, animated: Bool = true) {
+        guard categories.count > index else { return }
         let selectedCategory = categories[index]
-
-        // Animasyon ile geçiş
+        
+        itemsForSelectedCategory = selectedCategory.products ?? []
+        
         if animated {
-            // Kaydırma yönünü belirle
             let direction: CGFloat = index > selectedCategoryIndex ? 1 : -1
             
-            // Önceki içerikleri kaydırma işlemi (soldan sağa veya sağdan sola)
             UIView.animate(withDuration: 0.5, animations: {
-                // Sağdan sola kayma (index > selectedCategoryIndex)
                 self.collectionView.transform = CGAffineTransform(translationX: direction * self.collectionView.frame.width, y: 0)
             }, completion: { _ in
-                // Yeni içerik yükleme
-//                self.itemsForSelectedCategory = self.viewModel.getContentForCategory(selectedCategory)
-                self.collectionView.reloadData()  // İçeriği yeniden yükle
-                
-                // Kategori değişimi sonrası index yazdır
-                print("CollectionView's content has been changed. Current Index: \(self.selectedCategoryIndex)")
-                
-                // Koleksiyonu eski haline getirme
+                self.collectionView.reloadData()
                 UIView.animate(withDuration: 0.5) {
                     self.collectionView.transform = CGAffineTransform.identity
                 }
             })
         } else {
-            // Animasyon olmadan içerik değişimi
-//            self.itemsForSelectedCategory = self.viewModel.getContentForCategory(selectedCategory)
             self.collectionView.reloadData()
-            
-            // Kategori değişimi sonrası index'i yazdır
-            print("CollectionView's content has been changed. Current Index: \(self.selectedCategoryIndex)")
         }
     }
-
-    
-    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == collectionViewCategories {
-            return categories.count
+            print(viewModel.categoriesNumberOfRowsInSection(section: section))
+            return viewModel.categoriesNumberOfRowsInSection(section: section)
         } else {
             return itemsForSelectedCategory.count
         }
@@ -102,9 +82,9 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == collectionViewCategories {
-            // Kategori hücre yapılandırması
+            let category = viewModel.categoriesCellForRowAt(indexPath: indexPath)
+            
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCell", for: indexPath) as! CategoryCell
-            let category = categories[indexPath.row]
             cell.configure(with: category, isInitiallySelected: indexPath.row == selectedCategoryIndex)
             cell.delegate = self
             cell.index = indexPath.row
@@ -112,7 +92,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCell", for: indexPath) as! ProductCell
             let contentItem = itemsForSelectedCategory[indexPath.row]
-            //                cell.configure(with: contentItem)
             return cell
         }
     }
@@ -121,8 +100,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         if collectionView == collectionViewCategories {
             selectedCategoryIndex = indexPath.row
             loadContentForSelectedCategory(index: selectedCategoryIndex, animated: true)
-            
-            print("Selected Category Index: \(selectedCategoryIndex)")
             
             collectionViewCategories.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
         }
@@ -141,6 +118,4 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         collectionViewCategories.selectItem(at: indexPath, animated: true, scrollPosition: [])
         collectionView(collectionViewCategories, didSelectItemAt: indexPath)
     }
-    
-    
 }
