@@ -8,9 +8,9 @@
 import Foundation
 
 class HomeViewModel {
-    private var homeData: HomeModel?
+    var homeData: HomeModel?
     private var errorMessage: String?
-    private var selectedCategoryIndex: Int = 0
+    var selectedCategoryIndex: Int = 0
 
     func loadHomeData(completion: @escaping () -> ()) {
         if let path = Bundle.main.path(forResource: "shop", ofType: "json") {
@@ -89,18 +89,7 @@ class HomeViewModel {
     func serviceCellForRowAt(indexPath: IndexPath) -> Service {
         return getServices()[indexPath.row]
     }
-    
-    //Promotion
-    func getPromotions() -> [Promotion] {
-        return homeData?.items.flatMap { $0.promotion ?? [] } ?? []
-    }
-    func PromotionNumberOfRowsInSection(section: Int) -> Int  {
-        return getPromotions().count
-    }
-    func PromotionCellForRowAt(indexPath: IndexPath) -> Promotion {
-        return getPromotions()[indexPath.row]
-    }
-    
+   
     //Coupon
     func getCoupons() -> [Coupon] {
         return homeData?.items.flatMap { $0.coupons ?? [] } ?? []
@@ -108,10 +97,9 @@ class HomeViewModel {
     func couponNumberOfRowsInSection(section: Int) -> Int  {
         return getCoupons().count
     }
-    func coupomCellForRowAt(indexPath: IndexPath) -> Coupon {
+    func couponCellForRowAt(indexPath: IndexPath) -> Coupon {
         return getCoupons()[indexPath.row]
     }
-    
     
     
     func getErrorMessage() -> String? {

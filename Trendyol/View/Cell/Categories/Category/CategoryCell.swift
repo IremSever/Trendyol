@@ -29,7 +29,7 @@ class CategoryCell: UICollectionViewCell {
     func configure(with category: Category, isInitiallySelected: Bool = false) {
         lblCategory.text = category.name
 
-        viewBg.backgroundColor = UIColor(hex: category.backgroundColor) ?? .clear
+        viewBg.backgroundColor = UIColor(hex: category.backgroundColor ?? "") ?? .clear
         
         self.isSelected = isInitiallySelected
         updateSelectionStyle()

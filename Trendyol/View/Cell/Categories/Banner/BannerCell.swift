@@ -8,7 +8,7 @@
 import UIKit
 
 class BannerCell: UICollectionViewCell {
-
+    
     @IBOutlet weak var imgBanner: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -16,12 +16,13 @@ class BannerCell: UICollectionViewCell {
     }
     
     func configure(with banner: Banner) {
-        imgBanner.layer.cornerRadius = 20
         if let imageName = banner.image {
             imgBanner.image = UIImage(named: imageName)
         } else {
             imgBanner.image = UIImage(named: "default_product_image")
         }
+        imgBanner.layer.cornerRadius = 20
+        imgBanner.layer.masksToBounds = true
     }
-
+    
 }

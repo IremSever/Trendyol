@@ -32,8 +32,8 @@ class ProductCell: UICollectionViewCell {
             imgProduct.image = UIImage(named: "default_product_image")
         }
         
+        
     }
-    
     func configureStars(rating: Double) {
         for (index, star) in imgStars.enumerated() {
             let starIndex = Double(index + 1)

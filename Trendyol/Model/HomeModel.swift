@@ -3,9 +3,7 @@
 //  Trendyol
 //
 //  Created by IREM SEVER on 5.11.2024.
-//
-
-import Foundation
+//import Foundation
 
 struct HomeModel: Codable {
     let items: [Item]
@@ -18,7 +16,6 @@ struct Item: Codable {
     let template: String
     let banners: [Banner]?
     let services: [Service]?
-    let promotion: [Promotion]?
     let coupons: [Coupon]?
 }
 
@@ -31,7 +28,7 @@ struct Banner: Codable {
 // MARK: - Category
 struct Category: Codable {
     let id: Int
-    let name, image, url, backgroundColor, template: String
+    let name, image, url, backgroundColor: String?
     let products: [Product]
 }
 
@@ -43,13 +40,16 @@ struct Product: Codable {
     let originalPrice, discount: Int
     let isPromotion: Bool
     let promotionPrice: Double
-    let category, brand: String
+    let category: String
+    let brand: String
     let rating: Double
     let reviewsCount: Int
-    let stockStatus, stickerIconImage: String
+    let stockStatus: StockStatus
+    let stickerIconImage: String
     let flashSale, favoriteExclusive, popularCampaign: Bool
     let image: String?
     let attributes: Attributes
+    let template: Template
 }
 
 // MARK: - Attributes
@@ -59,9 +59,19 @@ struct Attributes: Codable {
     let fit: String
 }
 
+enum StockStatus: String, Codable {
+    case inStock = "In Stock"
+}
+
+enum Template: String, Codable {
+    case product = "product"
+    case categories = "categories" // Added for future template cases
+    case banner = "banner" // Added for future template cases
+}
+
 // MARK: - Coupon
 struct Coupon: Codable {
-    let icon, title: String
+    let icon, title: String?
     let availableCoupons: [AvailableCoupon]
 }
 
@@ -70,14 +80,9 @@ struct AvailableCoupon: Codable {
     let amount, minimumPurchase, expirationDate: String
 }
 
-// MARK: - Promotion
-struct Promotion: Codable {
-    let text, image, value: String
-}
-
 // MARK: - Service
 struct Service: Codable {
     let id: Int
-    let name, icon, info, infoColor: String
+    let name, icon, info, infoColor: String?
     let link: String
 }

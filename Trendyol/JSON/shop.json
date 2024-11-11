@@ -2,14 +2,14 @@
     "items": [
         {
             "title": "Our Categories",
-            "backgroundColor": "#F0F0F0",
+            "backgroundColor": " ",
             "categories": [
                 {
                     "id": 1,
                     "name": "Women",
                     "image": "women_category_image.png",
                     "url": "/categories/women",
-                    "backgroundColor": "#FFE0E0",
+                    "backgroundColor": " ",
                     "products": [
                         {
                             "id": 1,
@@ -180,7 +180,7 @@
                     "name": "Men",
                     "image": "men_category_image.png",
                     "url": "/categories/men",
-                    "backgroundColor": "#E0E0FF",
+                    "backgroundColor": " ",
                     "products": [
                         {
                             "id": 4,
@@ -271,7 +271,7 @@
                     "name": "Fashion",
                     "image": "fashion_category_image.png",
                     "url": "/categories/fashion",
-                    "backgroundColor": "#FFEEDD",
+                    "backgroundColor": " ",
                     "products": [
                         {
                             "id": 5,
@@ -335,18 +335,39 @@
             "backgroundColor": "#FFFFFF",
             "banners": [
                 {
-                    "image": "super_sale_banner1.png",
+                    "image": "banner1.png",
                     "text": "SUPER SALE DAYS",
                     "date": "November 6-11",
                     "campaignDetails": "Up to 50% discount on selected products!",
                     "backgroundColor": "#FFEEEE"
                 },
                 {
-                    "image": "new_year_banner.png",
+                    "image": "banner2.png",
                     "text": "New Year Special Offers",
                     "date": "December 25 - January 1",
                     "campaignDetails": "30% off on special holiday gifts!",
                     "backgroundColor": "#EEEFFF"
+                },
+                {
+                    "image": "banner3.png",
+                    "text": "SUPER SALE DAYS",
+                    "date": "November 6-11",
+                    "campaignDetails": "Up to 50% discount on selected products!",
+                    "backgroundColor": "#FFEEEE"
+                },
+                {
+                    "image": "banner4.png",
+                    "text": "New Year Special Offers",
+                    "date": "December 25 - January 1",
+                    "campaignDetails": "30% off on special holiday gifts!",
+                    "backgroundColor": "#EEEFFF"
+                },
+                {
+                    "image": "banner5.png",
+                    "text": "SUPER SALE DAYS",
+                    "date": "November 6-11",
+                    "campaignDetails": "Up to 50% discount on selected products!",
+                    "backgroundColor": "#FFEEEE"
                 }
             ],
             "template": "banner"
@@ -358,7 +379,7 @@
                 {
                     "id": 1,
                     "name": "Quick Market",
-                    "icon": "market_icon.png",
+                    "icon": "service1.png",
                     "info": "30 MIN",
                     "infoColor": "#FFCC00",
                     "link": "/services/quick-market"
@@ -366,32 +387,28 @@
                 {
                     "id": 2,
                     "name": "Food Delivery",
-                    "icon": "food_icon.png",
+                    "icon": "service2.png",
                     "info": "81 CITIES",
                     "infoColor": "#00CCFF",
                     "link": "/services/food-delivery"
+                },
+                {
+                    "id": 3,
+                    "name": "Quick Market",
+                    "icon": "service3.png",
+                    "info": "30 MIN",
+                    "infoColor": "#FFCC00",
+                    "link": "/services/quick-market"
                 }
             ],
             "template": "services"
-        },
-        {
-            "title": "Watch Live, Win Rewards!",
-            "backgroundColor": "#FFFFCC",
-            "promotion": [
-                {
-                    "text": "Win a chance to enter the draw!",
-                    "image": "raffle_banner.png",
-                    "value": "Prizes worth over 3,000,000 TL in total"
-                }
-            ],
-            "template": "promotion"
         },
         {
             "title": "Your Coupons",
             "backgroundColor": "#FFFAE0",
             "coupons": [
                 {
-                    "icon": "coupon_icon1.png",
+                    "icon": "coupon1.png",
                     "title": "Welcome Coupon",
                     "availableCoupons": [
                         {
@@ -407,7 +424,7 @@
                     ]
                 },
                 {
-                    "icon": "coupon_icon2.png",
+                    "icon": "coupon2.png",
                     "title": "Holiday Specials",
                     "availableCoupons": [
                         {
