@@ -29,13 +29,14 @@
                             "flashSale": true,
                             "favoriteExclusive": false,
                             "popularCampaign": true,
-                            "image": "leather_jacket.png",
+                            "image": "1.jpeg",
                             "attributes": {
                                 "material": "Genuine Leather",
                                 "color": "Black",
                                 "sizes": ["S", "M", "L"],
                                 "fit": "Slim Fit"
-                            }
+                            },
+                            "template": "product"
                         },
                         {
                             "id": 2,
@@ -55,13 +56,122 @@
                             "flashSale": false,
                             "favoriteExclusive": true,
                             "popularCampaign": false,
-                            "image": "running_shoes.png",
+                            "image": "10.jpeg",
                             "attributes": {
                                 "material": "Synthetic",
                                 "color": "White",
                                 "sizes": ["6", "7", "8"],
                                 "fit": "Regular Fit"
-                            }
+                            },
+                            "template": "product"
+                        },
+                        {
+                            "id": 111,
+                            "name": "Women’s Leather Jacket",
+                            "description": "Stylish and warm leather jacket.",
+                            "price": 199.99,
+                            "originalPrice": 250.00,
+                            "discount": 20,
+                            "isPromotion": true,
+                            "promotionPrice": 179.99,
+                            "category": "Clothing",
+                            "brand": "LeatherCo",
+                            "rating": 4.5,
+                            "reviewsCount": 120,
+                            "stockStatus": "In Stock",
+                            "stickerIconImage": "promo.jpeg",
+                            "flashSale": true,
+                            "favoriteExclusive": false,
+                            "popularCampaign": true,
+                            "image": "2.jpeg",
+                            "attributes": {
+                                "material": "Genuine Leather",
+                                "color": "Black",
+                                "sizes": ["S", "M", "L"],
+                                "fit": "Slim Fit"
+                            },
+                            "template": "product"
+                        },
+                        {
+                            "id": 112,
+                            "name": "Women’s Running Shoes",
+                            "description": "Comfortable and durable running shoes.",
+                            "price": 89.99,
+                            "originalPrice": 120.00,
+                            "discount": 25,
+                            "isPromotion": false,
+                            "promotionPrice": 0,
+                            "category": "Footwear",
+                            "brand": "RunFast",
+                            "rating": 4.7,
+                            "reviewsCount": 200,
+                            "stockStatus": "In Stock",
+                            "stickerIconImage": "bestseller.jpeg",
+                            "flashSale": false,
+                            "favoriteExclusive": true,
+                            "popularCampaign": false,
+                            "image": "9.jpeg",
+                            "attributes": {
+                                "material": "Synthetic",
+                                "color": "White",
+                                "sizes": ["6", "7", "8"],
+                                "fit": "Regular Fit"
+                            },
+                            "template": "product"
+                        },
+                        {
+                            "id": 114,
+                            "name": "Women’s Leather Jacket",
+                            "description": "Stylish and warm leather jacket.",
+                            "price": 199.99,
+                            "originalPrice": 250.00,
+                            "discount": 20,
+                            "isPromotion": true,
+                            "promotionPrice": 179.99,
+                            "category": "Clothing",
+                            "brand": "LeatherCo",
+                            "rating": 4.5,
+                            "reviewsCount": 120,
+                            "stockStatus": "In Stock",
+                            "stickerIconImage": "promo.jpeg",
+                            "flashSale": true,
+                            "favoriteExclusive": false,
+                            "popularCampaign": true,
+                            "image": "4.jpeg",
+                            "attributes": {
+                                "material": "Genuine Leather",
+                                "color": "Black",
+                                "sizes": ["S", "M", "L"],
+                                "fit": "Slim Fit"
+                            },
+                            "template": "product"
+                        },
+                        {
+                            "id": 115,
+                            "name": "Women’s Leather Jacket",
+                            "description": "Stylish and warm leather jacket.",
+                            "price": 199.99,
+                            "originalPrice": 250.00,
+                            "discount": 20,
+                            "isPromotion": true,
+                            "promotionPrice": 179.99,
+                            "category": "Clothing",
+                            "brand": "LeatherCo",
+                            "rating": 4.5,
+                            "reviewsCount": 120,
+                            "stockStatus": "In Stock",
+                            "stickerIconImage": "promo.jpeg",
+                            "flashSale": true,
+                            "favoriteExclusive": false,
+                            "popularCampaign": true,
+                            "image": "3.jpeg",
+                            "attributes": {
+                                "material": "Genuine Leather",
+                                "color": "Black",
+                                "sizes": ["S", "M", "L"],
+                                "fit": "Slim Fit"
+                            },
+                            "template": "product"
                         }
                     ]
                 },
@@ -90,14 +200,70 @@
                             "flashSale": false,
                             "favoriteExclusive": true,
                             "popularCampaign": false,
-                            "image": "slim_fit_jeans.png",
+                            "image": "e1.jpeg",
                             "attributes": {
                                 "material": "Cotton Blend",
                                 "color": "Blue",
                                 "sizes": ["M", "L", "XL"],
                                 "fit": "Slim Fit"
-                            }
+                            },
+                            "template": "product"
+                        },
+                        {
+                            "id": 20,
+                            "name": "Men’s  Coat",
+                            "description": "Classic slim fit jeans for everyday wear.",
+                            "price": 59.99,
+                            "originalPrice": 80.00,
+                            "discount": 25,
+                            "isPromotion": false,
+                            "promotionPrice": 0,
+                            "category": "Clothing",
+                            "brand": "DenimWear",
+                            "rating": 4.6,
+                            "reviewsCount": 150,
+                            "stockStatus": "In Stock",
+                            "stickerIconImage": "bestseller.jpeg",
+                            "flashSale": false,
+                            "favoriteExclusive": true,
+                            "popularCampaign": false,
+                            "image": "e2.jpeg",
+                            "attributes": {
+                                "material": "Cotton Blend",
+                                "color": "Blue",
+                                "sizes": ["M", "L", "XL"],
+                                "fit": "Slim Fit"
+                            },
+                            "template": "product"
+                        },
+                        {
+                            "id": 21,
+                            "name": "Men’s Slim Fit Jeans",
+                            "description": "Classic slim fit jeans for everyday wear.",
+                            "price": 59.99,
+                            "originalPrice": 80.00,
+                            "discount": 25,
+                            "isPromotion": false,
+                            "promotionPrice": 0,
+                            "category": "Clothing",
+                            "brand": "DenimWear",
+                            "rating": 4.6,
+                            "reviewsCount": 150,
+                            "stockStatus": "In Stock",
+                            "stickerIconImage": "bestseller.jpeg",
+                            "flashSale": false,
+                            "favoriteExclusive": true,
+                            "popularCampaign": false,
+                            "image": "e3.jpeg",
+                            "attributes": {
+                                "material": "Cotton Blend",
+                                "color": "Blue",
+                                "sizes": ["M", "L", "XL"],
+                                "fit": "Slim Fit"
+                            },
+                            "template": "product"
                         }
+                        
                     ]
                 },
                 {
@@ -130,7 +296,8 @@
                                 "material": "Plastic",
                                 "color": "Black",
                                 "fit": "One Size"
-                            }
+                            },
+                            "template": "product"
                         },
                         {
                             "id": 6,
@@ -155,12 +322,13 @@
                                 "material": "Metal",
                                 "color": "Silver",
                                 "fit": "Adjustable"
-                            }
+                            },
+                            "template": "product"
                         }
                     ]
                 }
             ],
-            "template": "a modul"
+            "template": "categories"
         },
         {
             "title": "",
@@ -181,7 +349,7 @@
                     "backgroundColor": "#EEEFFF"
                 }
             ],
-            "template": "b modul"
+            "template": "banner"
         },
         {
             "title": "Discover Our Services",
@@ -204,7 +372,7 @@
                     "link": "/services/food-delivery"
                 }
             ],
-            "template": "c modul"
+            "template": "services"
         },
         {
             "title": "Watch Live, Win Rewards!",
@@ -216,7 +384,7 @@
                     "value": "Prizes worth over 3,000,000 TL in total"
                 }
             ],
-            "template": "d modul"
+            "template": "promotion"
         },
         {
             "title": "Your Coupons",
@@ -255,7 +423,7 @@
                     ]
                 }
             ],
-            "template": "e modul"
+            "template": "coupon"
         }
     ]
 }
