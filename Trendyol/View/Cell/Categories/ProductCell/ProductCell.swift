@@ -7,11 +7,44 @@
 
 import UIKit
 
-class ProductCell: UICollectionViewCell {
 
+class ProductCell: UICollectionViewCell {
+   
+    @IBOutlet var imgStars: [UIImageView]!
+    @IBOutlet weak var lblPrice: UILabel!
+    @IBOutlet weak var lblProduct: UILabel!
+    @IBOutlet weak var imgProduct: UIImageView!
+    @IBOutlet weak var viewBg: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    func configure(with product: Product) {
+        lblProduct.text = product.brand + product.description
+        lblPrice.text = String(product.price)
+        
+        configureStars(rating: product.rating)
+        
+        if let imageName = product.image {
+            imgProduct.image = UIImage(named: imageName)
+        } else {
+            imgProduct.image = UIImage(named: "default_product_image")
+        }
+        
+    }
+    
+    func configureStars(rating: Double) {
+        for (index, star) in imgStars.enumerated() {
+            let starIndex = Double(index + 1)
+            if rating >= starIndex {
+                star.image = UIImage(named: "star_filled")
+            } else if rating >= starIndex - 0.5 {
+                star.image = UIImage(named: "star_half_filled")
+            } else {
+                star.image = UIImage(named: "star_empty")
+            }
+        }
     }
 
 }

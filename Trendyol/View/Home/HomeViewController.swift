@@ -53,7 +53,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         guard categories.count > index else { return }
         let selectedCategory = categories[index]
         
-        itemsForSelectedCategory = selectedCategory.products ?? []
+        itemsForSelectedCategory = selectedCategory.products
         
         if animated {
             let direction: CGFloat = index > selectedCategoryIndex ? 1 : -1

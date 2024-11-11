@@ -29,6 +29,7 @@
                             "flashSale": true,
                             "favoriteExclusive": false,
                             "popularCampaign": true,
+                            "image": "leather_jacket.png",
                             "attributes": {
                                 "material": "Genuine Leather",
                                 "color": "Black",
@@ -54,6 +55,7 @@
                             "flashSale": false,
                             "favoriteExclusive": true,
                             "popularCampaign": false,
+                            "image": "running_shoes.png",
                             "attributes": {
                                 "material": "Synthetic",
                                 "color": "White",
@@ -88,11 +90,71 @@
                             "flashSale": false,
                             "favoriteExclusive": true,
                             "popularCampaign": false,
+                            "image": "slim_fit_jeans.png",
                             "attributes": {
                                 "material": "Cotton Blend",
                                 "color": "Blue",
                                 "sizes": ["M", "L", "XL"],
                                 "fit": "Slim Fit"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": 3,
+                    "name": "Fashion",
+                    "image": "fashion_category_image.png",
+                    "url": "/categories/fashion",
+                    "backgroundColor": "#FFEEDD",
+                    "products": [
+                        {
+                            "id": 5,
+                            "name": "Stylish Sunglasses",
+                            "description": "Trendy sunglasses to complete your look.",
+                            "price": 49.99,
+                            "originalPrice": 70.00,
+                            "discount": 30,
+                            "isPromotion": false,
+                            "promotionPrice": 0,
+                            "category": "Accessories",
+                            "brand": "Sunny",
+                            "rating": 4.8,
+                            "reviewsCount": 85,
+                            "stockStatus": "In Stock",
+                            "stickerIconImage": "new_arrival.png",
+                            "flashSale": false,
+                            "favoriteExclusive": false,
+                            "popularCampaign": true,
+                            "image": "stylish_sunglasses.png",
+                            "attributes": {
+                                "material": "Plastic",
+                                "color": "Black",
+                                "fit": "One Size"
+                            }
+                        },
+                        {
+                            "id": 6,
+                            "name": "Classic Wrist Watch",
+                            "description": "Elegant wrist watch for all occasions.",
+                            "price": 159.99,
+                            "originalPrice": 200.00,
+                            "discount": 20,
+                            "isPromotion": true,
+                            "promotionPrice": 139.99,
+                            "category": "Accessories",
+                            "brand": "TimeMaster",
+                            "rating": 4.9,
+                            "reviewsCount": 200,
+                            "stockStatus": "In Stock",
+                            "stickerIconImage": "promo.png",
+                            "flashSale": true,
+                            "favoriteExclusive": true,
+                            "popularCampaign": false,
+                            "image": "classic_watch.png",
+                            "attributes": {
+                                "material": "Metal",
+                                "color": "Silver",
+                                "fit": "Adjustable"
                             }
                         }
                     ]
@@ -147,11 +209,13 @@
         {
             "title": "Watch Live, Win Rewards!",
             "backgroundColor": "#FFFFCC",
-            "promotion": [ {
-                "text": "Win a chance to enter the draw!",
-                "image": "raffle_banner.png",
-                "value": "Prizes worth over 3,000,000 TL in total"
-            } ],
+            "promotion": [
+                {
+                    "text": "Win a chance to enter the draw!",
+                    "image": "raffle_banner.png",
+                    "value": "Prizes worth over 3,000,000 TL in total"
+                }
+            ],
             "template": "d modul"
         },
         {
@@ -182,7 +246,7 @@
                             "amount": "20% Off",
                             "minimumPurchase": "No minimum purchase",
                             "expirationDate": "Expires on 2023-12-25"
-                        },  
+                        },
                         {
                             "amount": "50% Off",
                             "minimumPurchase": "Min. 400 TL purchase",
@@ -195,3 +259,4 @@
         }
     ]
 }
+
