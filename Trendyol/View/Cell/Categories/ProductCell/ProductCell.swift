@@ -12,6 +12,7 @@ class ProductCell: UICollectionViewCell {
    
     @IBOutlet weak var lblReviews: UILabel!
     @IBOutlet weak var lblRating: UILabel!
+    
     @IBOutlet var imgStars: [UIImageView]!
     @IBOutlet weak var lblPrice: UILabel!
     @IBOutlet weak var lblProduct: UILabel!
