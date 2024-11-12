@@ -20,17 +20,17 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6wi-GL-tHh">
                         <rect key="frame" x="0.0" y="0.0" width="220" height="348"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="24R-Na-8y3">
-                                <rect key="frame" x="16" y="17" width="188" height="200"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="24R-Na-8y3">
+                                <rect key="frame" x="16" y="16" width="188" height="194"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Labdsfssdffsdddfffdfdfdfdfdel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dkk-Yq-4Au">
-                                <rect key="frame" x="16" y="218" width="188" height="65"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Labdsfssdffsdddfffdfdfdfdfdel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dkk-Yq-4Au">
+                                <rect key="frame" x="24" y="218" width="172" height="65"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="kyC-FD-xKp">
-                                <rect key="frame" x="16" y="286" width="154" height="20.333333333333314"/>
+                                <rect key="frame" x="16" y="285.66666666666669" width="154" height="20.333333333333314"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcQ-0v-3yO">
                                         <rect key="frame" x="0.0" y="0.0" width="17" height="20.333333333333332"/>
@@ -108,6 +108,8 @@
                 <outlet property="imgProduct" destination="24R-Na-8y3" id="SbU-EL-pb0"/>
                 <outlet property="lblPrice" destination="W4H-Wr-iMO" id="4Km-h7-PIb"/>
                 <outlet property="lblProduct" destination="Dkk-Yq-4Au" id="LVl-xz-JOT"/>
+                <outlet property="lblRating" destination="hcQ-0v-3yO" id="5DK-re-VdV"/>
+                <outlet property="lblReviews" destination="tvF-Nj-4Fl" id="19M-mR-LCX"/>
                 <outlet property="viewBg" destination="6wi-GL-tHh" id="wha-pJ-aYb"/>
                 <outletCollection property="imgStars" destination="7X1-jJ-fHK" collectionClass="NSMutableArray" id="Z4K-nv-k2n"/>
             </connections>

@@ -101,6 +101,29 @@ class HomeViewModel {
         return getCoupons()[indexPath.row]
     }
     
+    //Product
+    func getGroupedProductsByBrand() -> [[Product]] {
+           var groupedByBrand: [[Product]] = []
+           
+           let allProducts = getCategories().flatMap { $0.products }
+           let grouped = Dictionary(grouping: allProducts, by: { $0.brand })
+           
+           for (_, products) in grouped {
+               groupedByBrand.append(products)
+           }
+           
+           return groupedByBrand
+       }
+    
+    func getPromotionalProducts() -> [Product] {
+        let allProducts = getCategories().flatMap { $0.products }
+        return allProducts.filter { $0.isPromotion }
+    }
+    
+    func getProductsGroupedByCategory(categoryName: String) -> [Product] {
+        let allProducts = getCategories().flatMap { $0.products }
+        return allProducts.filter { $0.category == categoryName }
+    }
     
     func getErrorMessage() -> String? {
         return errorMessage

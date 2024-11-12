@@ -3,13 +3,13 @@
 //  Trendyol
 //
 //  Created by IREM SEVER on 5.11.2024.
-//import Foundation
+
+import Foundation
 
 struct HomeModel: Codable {
     let items: [Item]
 }
 
-// MARK: - Item
 struct Item: Codable {
     let title, backgroundColor: String
     let categories: [Category]?
@@ -19,20 +19,17 @@ struct Item: Codable {
     let coupons: [Coupon]?
 }
 
-// MARK: - Banner
 struct Banner: Codable {
     let image, text, date, campaignDetails: String?
     let backgroundColor: String
 }
 
-// MARK: - Category
 struct Category: Codable {
     let id: Int
     let name, image, url, backgroundColor: String?
     let products: [Product]
 }
 
-// MARK: - Product
 struct Product: Codable {
     let id: Int
     let name, description: String
@@ -52,7 +49,6 @@ struct Product: Codable {
     let template: Template
 }
 
-// MARK: - Attributes
 struct Attributes: Codable {
     let material, color: String
     let sizes: [String]?
@@ -65,22 +61,19 @@ enum StockStatus: String, Codable {
 
 enum Template: String, Codable {
     case product = "product"
-    case categories = "categories" // Added for future template cases
-    case banner = "banner" // Added for future template cases
+    case categories = "categories"
+    case banner = "banner"
 }
 
-// MARK: - Coupon
 struct Coupon: Codable {
     let icon, title: String?
     let availableCoupons: [AvailableCoupon]
 }
 
-// MARK: - AvailableCoupon
 struct AvailableCoupon: Codable {
     let amount, minimumPurchase, expirationDate: String
 }
 
-// MARK: - Service
 struct Service: Codable {
     let id: Int
     let name, icon, info, infoColor: String?
