@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,12 +16,12 @@
                 <rect key="frame" x="0.0" y="0.0" width="146" height="166"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="42X-xb-PGD">
-                        <rect key="frame" x="8" y="8" width="130" height="133"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="42X-xb-PGD">
+                        <rect key="frame" x="0.0" y="0.0" width="146" height="145.66666666666666"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNd-Xe-RgC">
-                        <rect key="frame" x="8" y="144" width="130" height="14"/>
-                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                        <rect key="frame" x="8" y="148.66666666666666" width="130" height="9.3333333333333428"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="8"/>
                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -31,11 +31,11 @@
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="gNd-Xe-RgC" secondAttribute="trailing" constant="8" id="ArY-wO-yyh"/>
                 <constraint firstItem="gNd-Xe-RgC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="OPO-3f-GPu"/>
-                <constraint firstAttribute="trailing" secondItem="42X-xb-PGD" secondAttribute="trailing" constant="8" id="UvW-bR-mOA"/>
-                <constraint firstItem="42X-xb-PGD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="al6-Gd-mLI"/>
+                <constraint firstAttribute="trailing" secondItem="42X-xb-PGD" secondAttribute="trailing" id="UvW-bR-mOA"/>
+                <constraint firstItem="42X-xb-PGD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="al6-Gd-mLI"/>
                 <constraint firstItem="gNd-Xe-RgC" firstAttribute="top" secondItem="42X-xb-PGD" secondAttribute="bottom" constant="3" id="bOM-0i-8Of"/>
                 <constraint firstAttribute="bottom" secondItem="gNd-Xe-RgC" secondAttribute="bottom" constant="8" id="sdA-zm-FNG"/>
-                <constraint firstItem="42X-xb-PGD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="vZB-TB-ROy"/>
+                <constraint firstItem="42X-xb-PGD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="vZB-TB-ROy"/>
             </constraints>
             <size key="customSize" width="146" height="166"/>
             <connections>

@@ -91,7 +91,7 @@
                                     <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                             </button>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7bN-le-PAo">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7bN-le-PAo">
                                 <rect key="frame" x="16" y="103" width="361" height="666"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -106,7 +106,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oqa-EM-9nT">
-                                            <rect key="frame" x="0.0" y="102" width="361" height="637"/>
+                                            <rect key="frame" x="0.0" y="31" width="361" height="708"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zeA-UI-nDe">
                                                 <size key="itemSize" width="128" height="128"/>
@@ -122,7 +122,7 @@
                                         <constraint firstAttribute="trailing" secondItem="oqa-EM-9nT" secondAttribute="trailing" id="1L6-Os-hpo"/>
                                         <constraint firstAttribute="bottom" secondItem="oqa-EM-9nT" secondAttribute="bottom" constant="-73" id="Bz8-Zr-Zd6"/>
                                         <constraint firstItem="oqa-EM-9nT" firstAttribute="leading" secondItem="zQF-9x-Q0M" secondAttribute="leading" id="Fdx-hx-i6i"/>
-                                        <constraint firstItem="oqa-EM-9nT" firstAttribute="top" secondItem="zQF-9x-Q0M" secondAttribute="top" constant="102" id="H1p-hp-hSe"/>
+                                        <constraint firstItem="oqa-EM-9nT" firstAttribute="top" secondItem="zQF-9x-Q0M" secondAttribute="top" constant="31" id="H1p-hp-hSe"/>
                                     </constraints>
                                 </view>
                                 <cells/>
@@ -132,7 +132,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="DD8-3W-TDG" firstAttribute="leading" secondItem="1Ol-JW-RVt" secondAttribute="trailing" constant="8" id="5tW-zJ-BgJ"/>
-                            <constraint firstItem="DD8-3W-TDG" firstAttribute="top" secondItem="83K-9o-yMS" secondAttribute="top" constant="-46" id="Esz-v3-O8h"/>
+                            <constraint firstItem="DD8-3W-TDG" firstAttribute="top" secondItem="83K-9o-yMS" secondAttribute="top" constant="-42" id="Esz-v3-O8h"/>
                             <constraint firstAttribute="trailing" secondItem="DD8-3W-TDG" secondAttribute="trailing" constant="8" id="SOd-jF-kbW"/>
                             <constraint firstItem="nuu-eL-upE" firstAttribute="top" secondItem="83K-9o-yMS" secondAttribute="top" constant="-53" id="YEf-qm-awZ"/>
                             <constraint firstItem="1Ol-JW-RVt" firstAttribute="top" secondItem="83K-9o-yMS" secondAttribute="top" constant="-42" id="Z5V-nZ-92T"/>
