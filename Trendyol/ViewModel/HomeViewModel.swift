@@ -49,6 +49,7 @@ class HomeViewModel {
     func setSelectedCategoryIndex(_ index: Int) {
         selectedCategoryIndex = index
     }
+    
     func getSelectedCategoryProducts() -> [Product] {
         let categories = getCategories()
         guard selectedCategoryIndex < categories.count else { return [] }
@@ -72,9 +73,11 @@ class HomeViewModel {
     func getBanners() -> [Banner] {
         return homeData?.items.flatMap { $0.banners ?? [] } ?? []
     }
+    
     func bannerNumberOfRowsInSection(section: Int) -> Int  {
         return getBanners().count
     }
+    
     func bannerCellForRowAt(indexPath: IndexPath) -> Banner {
         return getBanners()[indexPath.row]
     }
@@ -83,38 +86,41 @@ class HomeViewModel {
     func getServices() -> [Service] {
         return homeData?.items.flatMap { $0.services ?? [] } ?? []
     }
+    
     func serviceNumberOfRowsInSection(section: Int) -> Int  {
         return getServices().count
     }
+    
     func serviceCellForRowAt(indexPath: IndexPath) -> Service {
         return getServices()[indexPath.row]
     }
-   
+
     //Coupon
     func getCoupons() -> [Coupon] {
         return homeData?.items.flatMap { $0.coupons ?? [] } ?? []
     }
+    
     func couponNumberOfRowsInSection(section: Int) -> Int  {
         return getCoupons().count
     }
+    
     func couponCellForRowAt(indexPath: IndexPath) -> Coupon {
         return getCoupons()[indexPath.row]
     }
     
-    //Product
     func getGroupedProductsByBrand() -> [[Product]] {
-           var groupedByBrand: [[Product]] = []
-           
-           let allProducts = getCategories().flatMap { $0.products }
-           let grouped = Dictionary(grouping: allProducts, by: { $0.brand })
-           
-           for (_, products) in grouped {
-               groupedByBrand.append(products)
-           }
-           
-           return groupedByBrand
-       }
-    
+        var groupedByBrand: [[Product]] = []
+        
+        let allProducts = getCategories().flatMap { $0.products }
+        let grouped = Dictionary(grouping: allProducts, by: { $0.brand })
+        
+        for (_, products) in grouped {
+            groupedByBrand.append(products)
+        }
+        
+        return groupedByBrand
+    }
+
     func getPromotionalProducts() -> [Product] {
         let allProducts = getCategories().flatMap { $0.products }
         return allProducts.filter { $0.isPromotion }
@@ -125,6 +131,21 @@ class HomeViewModel {
         return allProducts.filter { $0.category == categoryName }
     }
     
+    func getFlashSaleProducts() -> [Product] {
+        let allProducts = getCategories().flatMap { $0.products }
+        return allProducts.filter { $0.flashSale }
+    }
+
+    func getPreviouslyViewedProducts() -> [Product] {
+        let allProducts = getCategories().flatMap { $0.products }
+        return allProducts.filter { $0.previouslyViewed == true }
+    }
+    func getProductCategory(forCategory categoryName: String) -> [Product] {
+        let allProducts = getCategories().flatMap { $0.products }
+        return allProducts.filter { $0.category == categoryName }
+    }
+
+
     func getErrorMessage() -> String? {
         return errorMessage
     }

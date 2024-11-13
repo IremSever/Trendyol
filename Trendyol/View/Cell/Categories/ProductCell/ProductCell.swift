@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 class ProductCell: UICollectionViewCell {
    
     @IBOutlet weak var lblReviews: UILabel!

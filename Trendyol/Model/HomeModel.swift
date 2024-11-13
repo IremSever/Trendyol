@@ -42,11 +42,13 @@ struct Product: Codable {
     let rating: Double
     let reviewsCount: Int
     let stockStatus: StockStatus
-    let stickerIconImage: String
+    let stickerIconImage: String?
     let flashSale, favoriteExclusive, popularCampaign: Bool
     let image: String?
     let attributes: Attributes
     let template: Template
+    let flashProductionTimer: String? 
+    let previouslyViewed: Bool?
 }
 
 struct Attributes: Codable {
