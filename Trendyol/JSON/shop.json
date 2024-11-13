@@ -26,7 +26,7 @@
                             "reviewsCount": 120,
                             "stockStatus": "In Stock",
                             "stickerIconImage": "promo.jpeg",
-                            "flashSale": true,
+                            "flashSale": false,
                             "favoriteExclusive": false,
                             "popularCampaign": true,
                             "image": "1.jpeg",
@@ -112,7 +112,7 @@
                             "favoriteExclusive": false,
                             "popularCampaign": true,
                             "previouslyViewed": false,
-                            "image": "sunglasses.jpeg",
+                            "image": "5.jpeg",
                             "attributes": {
                                 "material": "Plastic",
                                 "color": "Black",
@@ -139,7 +139,7 @@
                             "favoriteExclusive": true,
                             "popularCampaign": false,
                             "previouslyViewed": false,
-                            "image": "floral_skirt.jpeg",
+                            "image": "3.jpeg",
                             "attributes": {
                                 "material": "Cotton",
                                 "color": "Pink",
@@ -230,7 +230,7 @@
                             "favoriteExclusive": false,
                             "popularCampaign": false,
                             "previouslyViewed": false,
-                            "image": "wallet.jpeg",
+                            "image": "e3.jpeg",
                             "attributes": {
                                 "material": "Genuine Leather",
                                 "color": "Brown",
@@ -257,7 +257,7 @@
                             "favoriteExclusive": true,
                             "popularCampaign": true,
                             "previouslyViewed": true,
-                            "image": "casual_sneakers.jpeg",
+                            "image": "e4.jpeg",
                             "attributes": {
                                 "material": "Canvas",
                                 "color": "Gray",
@@ -295,7 +295,7 @@
                             "favoriteExclusive": false,
                             "popularCampaign": false,
                             "previouslyViewed": false,
-                            "image": "vintage_watch.jpeg",
+                            "image": "1.jpeg",
                             "attributes": {
                                 "material": "Stainless Steel",
                                 "color": "Gold",
@@ -322,7 +322,7 @@
                             "favoriteExclusive": true,
                             "popularCampaign": false,
                             "previouslyViewed": true,
-                            "image": "trendy_ring.jpeg",
+                            "image": "2.jpeg",
                             "attributes": {
                                 "material": "Gold Plated",
                                 "color": "Gold",

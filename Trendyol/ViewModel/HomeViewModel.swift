@@ -32,7 +32,6 @@ class HomeViewModel {
         }
     }
 
-    // Categories
     func getCategories() -> [Category] {
         return homeData?.items.flatMap { $0.categories ?? [] } ?? []
     }
@@ -45,7 +44,6 @@ class HomeViewModel {
         return getCategories()[indexPath.row]
     }
 
-    // Selected Category and Products
     func setSelectedCategoryIndex(_ index: Int) {
         selectedCategoryIndex = index
     }
@@ -56,7 +54,6 @@ class HomeViewModel {
         return categories[selectedCategoryIndex].products
     }
 
-    // Template
     func getTemplateType(for section: Int) -> String? {
         return homeData?.items[section].template
     }
@@ -69,7 +66,6 @@ class HomeViewModel {
         return getSelectedCategoryProducts()[indexPath.row]
     }
 
-    //Banner
     func getBanners() -> [Banner] {
         return homeData?.items.flatMap { $0.banners ?? [] } ?? []
     }
@@ -82,7 +78,6 @@ class HomeViewModel {
         return getBanners()[indexPath.row]
     }
     
-    //Service
     func getServices() -> [Service] {
         return homeData?.items.flatMap { $0.services ?? [] } ?? []
     }
@@ -95,7 +90,6 @@ class HomeViewModel {
         return getServices()[indexPath.row]
     }
 
-    //Coupon
     func getCoupons() -> [Coupon] {
         return homeData?.items.flatMap { $0.coupons ?? [] } ?? []
     }
@@ -117,7 +111,6 @@ class HomeViewModel {
         for (_, products) in grouped {
             groupedByBrand.append(products)
         }
-        
         return groupedByBrand
     }
 
@@ -135,7 +128,10 @@ class HomeViewModel {
         let allProducts = getCategories().flatMap { $0.products }
         return allProducts.filter { $0.flashSale }
     }
-
+    func getFavoriteExculisive() -> [Product] {
+        let allProducts = getCategories().flatMap { $0.products }
+        return allProducts.filter { $0.favoriteExclusive == true }
+    }
     func getPreviouslyViewedProducts() -> [Product] {
         let allProducts = getCategories().flatMap { $0.products }
         return allProducts.filter { $0.previouslyViewed == true }
@@ -144,7 +140,6 @@ class HomeViewModel {
         let allProducts = getCategories().flatMap { $0.products }
         return allProducts.filter { $0.category == categoryName }
     }
-
 
     func getErrorMessage() -> String? {
         return errorMessage

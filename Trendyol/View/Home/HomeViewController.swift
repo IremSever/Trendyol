@@ -104,19 +104,20 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                 section = NSCollectionLayoutSection(group: group)
                 section.orthogonalScrollingBehavior = .paging
             case 3:
+                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(270))
+                let item = NSCollectionLayoutItem(layoutSize: itemSize)
+                item.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 0, bottom: 0, trailing: 0)
+                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(270))
+                let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
+                
+                section = NSCollectionLayoutSection(group: group)
+            case 4:
                 let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .absolute(80))
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
                 let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(80))
                 let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item, count: 2)
-                
                 section = NSCollectionLayoutSection(group: group)
-            case 4:
-                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(350))
-                let item = NSCollectionLayoutItem(layoutSize: itemSize)
-                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(350))
-                let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
-                section = NSCollectionLayoutSection(group: group)
-                
+                //-------------------------------
             case 5:
                 let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(350))
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
@@ -173,16 +174,13 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             switch section {
             case 0: return viewModel.getBanners().count
             case 1: return viewModel.getServices().count
-            case 2: return 1 /*viewModel.getBanners().count*/
-            case 3: return viewModel.getCoupons().count
-            case 4:
+            case 2, 3: return 1 /*viewModel.getBanners().count*/
+            case 4: return viewModel.getCoupons().count
+            case 5:
                 let selectedCategory = viewModel.getCategories()[selectedCategoryIndex]
                 return viewModel.getProductsGroupedByCategory(categoryName: selectedCategory.name ?? "").count
-            case 5: return  viewModel.getGroupedProductsByBrand().count
-            case 6: return viewModel.getPromotionalProducts().count
-            case 7: return viewModel.getSelectedCategoryProducts().count
-            case 8 : return 1
-            default: return 0
+           
+            default: return 1
                 
             }
         }
@@ -192,7 +190,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         if collectionView == collectionViewCategories {
             return 1
         } else {
-            return 9
+            return 10
         }
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -223,15 +221,28 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                 let banner = viewModel.bannerCellForRowAt(indexPath: indexPath)
                 cell.configure(with: banner)
                 return cell
-                
-                
             case 3:
+                let flashProducts = viewModel.getFlashSaleProducts()
+                guard indexPath.row < flashProducts.count else {
+                    print("Invalid index for flash sale products.")
+                    return UICollectionViewCell()
+                }
+                product = flashProducts[indexPath.row]
+                if let product = product {
+                    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PromotionCell", for: indexPath) as! PromotionCell
+                    cell.configure(with: product)
+                    return cell
+                } else {
+                    return UICollectionViewCell()
+                }
+            case 4:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CouponCell", for: indexPath) as! CouponCell
                 let coupon = viewModel.couponCellForRowAt(indexPath: indexPath)
                 cell.configure(with: coupon)
                 return cell
+                //-------------------------------
                 
-            case 4:
+            case 5:
                 let selectedCategory = viewModel.getCategories()[selectedCategoryIndex]
                 let productsInCategory = viewModel.getProductsGroupedByCategory(categoryName: selectedCategory.name ?? "")
                 guard indexPath.row < productsInCategory.count else {
@@ -240,7 +251,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                 }
                 product = productsInCategory[indexPath.row]
                 
-            case 5:
+            case 6:
                 let productsInBrand = viewModel.getGroupedProductsByBrand()
                 guard indexPath.row < productsInBrand.count, let firstProduct = productsInBrand[indexPath.row].first else {
                     print("No products available in this brand.")
@@ -248,13 +259,14 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                 }
                 product = firstProduct
                 
-            case 6, 7, 8, 9:
+            case 9, 7, 8:
                 let promotionalProducts = viewModel.getPromotionalProducts()
                 guard indexPath.row < promotionalProducts.count else {
                     print("Invalid index for promotional products.")
                     return UICollectionViewCell()
                 }
                 product = promotionalProducts[indexPath.row]
+            
                 
             default:
                 fatalError("Unexpected section in collectionView.")

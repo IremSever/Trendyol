@@ -41,6 +41,7 @@ class ProductCell: UICollectionViewCell {
         
     }
     func configureStars(rating: Double) {
+   
         for (index, star) in imgStars.enumerated() {
             let starIndex = Double(index + 1)
             if rating >= starIndex {

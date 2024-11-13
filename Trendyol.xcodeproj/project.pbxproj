@@ -124,6 +124,7 @@
 		61F210442CE23D49001140F2 /* Promotion */ = {
 			isa = PBXGroup;
 			children = (
+				66E08EBA2CDA3C0100215D3A /* ProductCell */,
 				61F210452CE23D65001140F2 /* PromotionCell.swift */,
 				61F210462CE23D65001140F2 /* PromotionCell.xib */,
 			);
@@ -250,7 +251,6 @@
 				66E08EB02CDA3A3800215D3A /* Banner */,
 				66E08EAF2CDA3A2700215D3A /* Category */,
 				66E08EB12CDA3A6100215D3A /* Coupon */,
-				66E08EBA2CDA3C0100215D3A /* ProductCell */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
