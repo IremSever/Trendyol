@@ -27,7 +27,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         //        collectionView.delegate = self
         //        collectionView.dataSource = self
         
-//        collectionViewCategories.collectionViewLayout = createLayoutForCategories()
+        collectionViewCategories.collectionViewLayout = createLayoutForCategories()
         //        collectionView.collectionViewLayout = createLayoutForProducts()
         
         registerCells()
@@ -56,33 +56,28 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         }
     }
     
-//    private func createLayoutForCategories() -> UICollectionViewLayout {
-//        let layout = UICollectionViewCompositionalLayout { (sectionIndex, layoutEnvironment) -> NSCollectionLayoutSection? in
-//            let section: NSCollectionLayoutSection
-//            switch sectionIndex {
-//            case 0:
-//                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(60))
-//                let item = NSCollectionLayoutItem(layoutSize: itemSize)
-//                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(60))
-//                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item, count: 1)
-//                section = NSCollectionLayoutSection(group: group)
-//                section.orthogonalScrollingBehavior = .continuous
-//            case 1:
-//                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.25), heightDimension: .absolute(45))
-//                let item = NSCollectionLayoutItem(layoutSize: itemSize)
-//                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(35))
-//                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item, count: 5)
-//                section = NSCollectionLayoutSection(group: group)
-//                section.orthogonalScrollingBehavior = .continuous
-//                
-//            default:
-//                return nil
-//            }
-//            return section
-//        }
-//        return layout
-//    }
-//    
+    private func createLayoutForCategories() -> UICollectionViewLayout {
+        let layout = UICollectionViewCompositionalLayout { (sectionIndex, layoutEnvironment) -> NSCollectionLayoutSection? in
+            let section: NSCollectionLayoutSection
+
+            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.20), heightDimension: .absolute(25))
+                    let item = NSCollectionLayoutItem(layoutSize: itemSize)
+                    item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 8) // Add spacing here
+
+                    // Define group size and set interItemSpacing for spacing between items
+                    let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(30))
+                    let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item, count: 5)
+         
+
+                    // Create section and set scrolling behavior
+                    section = NSCollectionLayoutSection(group: group)
+                    section.orthogonalScrollingBehavior = .continuous
+
+            return section
+        }
+        return layout
+    }
+    
     //    private func createLayoutForProducts() -> UICollectionViewLayout {
     //        let layout = UICollectionViewCompositionalLayout { (sectionIndex, layoutEnvironment) -> NSCollectionLayoutSection? in
     //            let section: NSCollectionLayoutSection

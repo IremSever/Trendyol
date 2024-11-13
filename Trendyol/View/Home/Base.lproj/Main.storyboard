@@ -64,6 +64,18 @@
                                     <outlet property="delegate" destination="GJg-nC-7oX" id="mt2-q1-Qbc"/>
                                 </connections>
                             </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ol-JW-RVt">
+                                <rect key="frame" x="317" y="61" width="26" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="26" id="x2e-ob-XV7"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <imageReference key="image" image="envelope.badge" catalog="system" symbolScale="medium"/>
+                                    <color key="baseForegroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DD8-3W-TDG">
                                 <rect key="frame" x="351" y="61" width="34" height="35"/>
                                 <constraints>
@@ -80,7 +92,7 @@
                                 </buttonConfiguration>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7bN-le-PAo">
-                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <rect key="frame" x="16" y="103" width="361" height="666"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dQu-zc-ZcU">
@@ -90,11 +102,11 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <view key="backgroundView" contentMode="scaleToFill" id="zQF-9x-Q0M">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="666"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="361" height="666"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oqa-EM-9nT">
-                                            <rect key="frame" x="0.0" y="102" width="393" height="637"/>
+                                            <rect key="frame" x="0.0" y="102" width="361" height="637"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zeA-UI-nDe">
                                                 <size key="itemSize" width="128" height="128"/>
@@ -115,24 +127,12 @@
                                 </view>
                                 <cells/>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ol-JW-RVt">
-                                <rect key="frame" x="317" y="61" width="26" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="26" id="x2e-ob-XV7"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled">
-                                    <imageReference key="image" image="envelope.badge" catalog="system" symbolScale="medium"/>
-                                    <color key="baseForegroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="83K-9o-yMS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="DD8-3W-TDG" firstAttribute="leading" secondItem="1Ol-JW-RVt" secondAttribute="trailing" constant="8" id="5tW-zJ-BgJ"/>
-                            <constraint firstItem="DD8-3W-TDG" firstAttribute="top" secondItem="83K-9o-yMS" secondAttribute="top" constant="-42" id="Esz-v3-O8h"/>
+                            <constraint firstItem="DD8-3W-TDG" firstAttribute="top" secondItem="83K-9o-yMS" secondAttribute="top" constant="-46" id="Esz-v3-O8h"/>
                             <constraint firstAttribute="trailing" secondItem="DD8-3W-TDG" secondAttribute="trailing" constant="8" id="SOd-jF-kbW"/>
                             <constraint firstItem="nuu-eL-upE" firstAttribute="top" secondItem="83K-9o-yMS" secondAttribute="top" constant="-53" id="YEf-qm-awZ"/>
                             <constraint firstItem="1Ol-JW-RVt" firstAttribute="top" secondItem="83K-9o-yMS" secondAttribute="top" constant="-42" id="Z5V-nZ-92T"/>
