@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QyY-2Z-3VB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QyY-2Z-3VB">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -49,8 +50,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="nuu-eL-upE">
+                                <rect key="frame" x="7" y="50" width="310" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="310" id="eLm-Xv-e0y"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                                <connections>
+                                    <outlet property="delegate" destination="GJg-nC-7oX" id="mt2-q1-Qbc"/>
+                                </connections>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DD8-3W-TDG">
+                                <rect key="frame" x="351" y="61" width="34" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="34" id="tuz-a1-8dq"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <imageReference key="image" image="bell.badge.circle.fill" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font">
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                    </preferredSymbolConfiguration>
+                                    <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
+                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7bN-le-PAo">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dQu-zc-ZcU">
@@ -60,11 +90,11 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <view key="backgroundView" contentMode="scaleToFill" id="zQF-9x-Q0M">
-                                    <rect key="frame" x="0.0" y="-103" width="393" height="769"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="666"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oqa-EM-9nT">
-                                            <rect key="frame" x="0.0" y="132" width="393" height="637"/>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oqa-EM-9nT">
+                                            <rect key="frame" x="0.0" y="102" width="393" height="637"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zeA-UI-nDe">
                                                 <size key="itemSize" width="128" height="128"/>
@@ -78,16 +108,37 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="oqa-EM-9nT" secondAttribute="trailing" id="1L6-Os-hpo"/>
-                                        <constraint firstAttribute="bottom" secondItem="oqa-EM-9nT" secondAttribute="bottom" id="Bz8-Zr-Zd6"/>
+                                        <constraint firstAttribute="bottom" secondItem="oqa-EM-9nT" secondAttribute="bottom" constant="-73" id="Bz8-Zr-Zd6"/>
                                         <constraint firstItem="oqa-EM-9nT" firstAttribute="leading" secondItem="zQF-9x-Q0M" secondAttribute="leading" id="Fdx-hx-i6i"/>
-                                        <constraint firstItem="oqa-EM-9nT" firstAttribute="top" secondItem="zQF-9x-Q0M" secondAttribute="top" constant="379" id="H1p-hp-hSe"/>
+                                        <constraint firstItem="oqa-EM-9nT" firstAttribute="top" secondItem="zQF-9x-Q0M" secondAttribute="top" constant="102" id="H1p-hp-hSe"/>
                                     </constraints>
                                 </view>
                                 <cells/>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ol-JW-RVt">
+                                <rect key="frame" x="317" y="61" width="26" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="26" id="x2e-ob-XV7"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <imageReference key="image" image="envelope.badge" catalog="system" symbolScale="medium"/>
+                                    <color key="baseForegroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="83K-9o-yMS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DD8-3W-TDG" firstAttribute="leading" secondItem="1Ol-JW-RVt" secondAttribute="trailing" constant="8" id="5tW-zJ-BgJ"/>
+                            <constraint firstItem="DD8-3W-TDG" firstAttribute="top" secondItem="83K-9o-yMS" secondAttribute="top" constant="-42" id="Esz-v3-O8h"/>
+                            <constraint firstAttribute="trailing" secondItem="DD8-3W-TDG" secondAttribute="trailing" constant="8" id="SOd-jF-kbW"/>
+                            <constraint firstItem="nuu-eL-upE" firstAttribute="top" secondItem="83K-9o-yMS" secondAttribute="top" constant="-53" id="YEf-qm-awZ"/>
+                            <constraint firstItem="1Ol-JW-RVt" firstAttribute="top" secondItem="83K-9o-yMS" secondAttribute="top" constant="-42" id="Z5V-nZ-92T"/>
+                            <constraint firstItem="1Ol-JW-RVt" firstAttribute="leading" secondItem="nuu-eL-upE" secondAttribute="trailing" id="aRx-OI-qW7"/>
+                            <constraint firstItem="nuu-eL-upE" firstAttribute="leading" secondItem="kcn-KB-gld" secondAttribute="leading" constant="7" id="x1c-QG-o72"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="yEN-fJ-4yh">
                         <color key="badgeColor" red="0.78019279239999995" green="0.7388806939" blue="0.94906157260000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -179,7 +230,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bell.badge.circle.fill" catalog="system" width="128" height="123"/>
         <image name="cart" catalog="system" width="128" height="102"/>
+        <image name="envelope.badge" catalog="system" width="128" height="94"/>
         <image name="hanger" catalog="system" width="128" height="99"/>
         <image name="heart" catalog="system" width="128" height="107"/>
         <image name="house" catalog="system" width="128" height="104"/>

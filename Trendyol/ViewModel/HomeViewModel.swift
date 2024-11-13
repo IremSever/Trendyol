@@ -18,16 +18,16 @@ class HomeViewModel {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path))
                 let decoder = JSONDecoder()
                 homeData = try decoder.decode(HomeModel.self, from: data)
-                print("HomeData Loaded Successfully: \(homeData?.items ?? [])")
+//                print("HomeData Loaded Successfully: \(homeData?.items ?? [])")
                 DispatchQueue.main.async { completion() }
             } catch {
                 errorMessage = "Failed to load data: \(error.localizedDescription)"
-                print(errorMessage ?? "Unknown Error")
+//                print(errorMessage ?? "Unknown Error")
                 DispatchQueue.main.async { completion() }
             }
         } else {
             errorMessage = "JSON file not found"
-            print(errorMessage ?? "Unknown Error")
+//            print(errorMessage ?? "Unknown Error")
             DispatchQueue.main.async { completion() }
         }
     }

@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		61F20FF12CDB9085001140F2 /* SearchBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F20FEF2CDB9085001140F2 /* SearchBarCell.swift */; };
-		61F20FF22CDB9085001140F2 /* SearchBarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61F20FF02CDB9085001140F2 /* SearchBarCell.xib */; };
 		61F210422CE22128001140F2 /* CategoryHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61F210412CE22128001140F2 /* CategoryHeaderCell.xib */; };
 		61F210432CE22128001140F2 /* CategoryHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F210402CE22128001140F2 /* CategoryHeaderCell.swift */; };
 		61F210472CE23D65001140F2 /* PromotionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61F210462CE23D65001140F2 /* PromotionCell.xib */; };
@@ -56,8 +54,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		61F20FEF2CDB9085001140F2 /* SearchBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarCell.swift; sourceTree = "<group>"; };
-		61F20FF02CDB9085001140F2 /* SearchBarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBarCell.xib; sourceTree = "<group>"; };
 		61F210402CE22128001140F2 /* CategoryHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHeaderCell.swift; sourceTree = "<group>"; };
 		61F210412CE22128001140F2 /* CategoryHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryHeaderCell.xib; sourceTree = "<group>"; };
 		61F210452CE23D65001140F2 /* PromotionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionCell.swift; sourceTree = "<group>"; };
@@ -116,15 +112,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		61F20FEE2CDB906A001140F2 /* Search Bar */ = {
-			isa = PBXGroup;
-			children = (
-				61F20FEF2CDB9085001140F2 /* SearchBarCell.swift */,
-				61F20FF02CDB9085001140F2 /* SearchBarCell.xib */,
-			);
-			path = "Search Bar";
-			sourceTree = "<group>";
-		};
 		61F210322CE21F79001140F2 /* Category Header */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,7 +239,6 @@
 			children = (
 				61F210442CE23D49001140F2 /* Promotion */,
 				667D406C2CDE473400FEEACB /* Categories */,
-				61F20FEE2CDB906A001140F2 /* Search Bar */,
 				667D406D2CE1F53E00FEEACB /* Services */,
 			);
 			path = Cell;
@@ -431,7 +417,6 @@
 				66E08EAE2CDA3A2100215D3A /* CategoryCell.xib in Resources */,
 				61F210472CE23D65001140F2 /* PromotionCell.xib in Resources */,
 				66E08EB52CDA3BE900215D3A /* BannerCell.xib in Resources */,
-				61F20FF22CDB9085001140F2 /* SearchBarCell.xib in Resources */,
 				667D40712CE1F57000FEEACB /* ServicesCell.xib in Resources */,
 				666355A32CD9E5AB005F0A06 /* LaunchScreen.storyboard in Resources */,
 				61F210422CE22128001140F2 /* CategoryHeaderCell.xib in Resources */,
@@ -473,7 +458,6 @@
 				61F210432CE22128001140F2 /* CategoryHeaderCell.swift in Sources */,
 				666355D02CD9F627005F0A06 /* HomeModel.swift in Sources */,
 				666355CE2CD9F613005F0A06 /* HomeViewModel.swift in Sources */,
-				61F20FF12CDB9085001140F2 /* SearchBarCell.swift in Sources */,
 				66EC355C2CDA596E00F523EA /* ProductCell.swift in Sources */,
 				66E08EAD2CDA3A2100215D3A /* CategoryCell.swift in Sources */,
 				66E08EB82CDA3BFC00215D3A /* CouponCell.swift in Sources */,
