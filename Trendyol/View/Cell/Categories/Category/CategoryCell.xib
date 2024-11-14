@@ -23,6 +23,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="86" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1aw-BB-eYQ"/>
                                     <constraint firstAttribute="width" constant="86" id="TU6-SH-sZ8"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
@@ -66,6 +67,7 @@
             </constraints>
             <size key="customSize" width="162" height="50"/>
             <connections>
+                <outlet property="heightButton" destination="1aw-BB-eYQ" id="eEq-tV-f20"/>
                 <outlet property="lblCategory" destination="fmm-Ht-J6J" id="nkX-ff-Mre"/>
                 <outlet property="viewBg" destination="9Bx-E3-99N" id="4vd-bn-4cN"/>
                 <outlet property="viewButton" destination="AUC-ZH-bkb" id="SFF-vJ-0RB"/>

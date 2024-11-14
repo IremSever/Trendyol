@@ -20,59 +20,60 @@ class CategoryCell: UICollectionViewCell {
     @IBOutlet weak var lblCategory: UILabel!
     @IBOutlet weak var viewButton: UIButton!
     weak var delegate: CategorySelectionDelegate?
-        weak var delegateProduct: ProductCategorySelectionDelegate?
-
-        var index: Int?
-
-        override func awakeFromNib() {
-            super.awakeFromNib()
-            
-            // Setup button appearance and actions
-            viewButton.layer.cornerRadius = 10
-            viewButton.layer.masksToBounds = true
-            viewButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
-        }
+    weak var delegateProduct: ProductCategorySelectionDelegate?
     
-        func configure(with category: Category, isInitiallySelected: Bool = false) {
-            lblCategory.text = category.name
-            viewBg.backgroundColor = UIColor(hex: category.backgroundColor ?? "") ?? .clear
-            self.isSelected = isInitiallySelected
+    var index: Int?
+    @IBOutlet weak var heightButton: NSLayoutConstraint!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        viewButton.layer.cornerRadius = 10
+        viewButton.layer.masksToBounds = true
+        viewButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+    }
+    
+    func configure(with category: Category, isInitiallySelected: Bool = false) {
+        lblCategory.text = category.name
+        viewBg.backgroundColor = UIColor(hex: category.backgroundColor ?? "") ?? .clear
+        self.isSelected = isInitiallySelected
+        updateSelectionStyle()
+        
+    }
+    
+    func configure(with categoryName: String, isInitiallySelected: Bool = false) {
+        lblCategory.text = categoryName
+        self.isSelected = isInitiallySelected
+        updateSelectionStyle()
+    }
+    override var isSelected: Bool {
+        didSet {
             updateSelectionStyle()
         }
-
-
-        override var isSelected: Bool {
-            didSet {
-                updateSelectionStyle()
-            }
-        }
-        
-        private func updateSelectionStyle() {
-            if isSelected {
-                viewButton.backgroundColor = .orange
-                viewButton.layer.borderWidth = 0
-                lblCategory.textColor = .white
-            } else {
-                viewButton.backgroundColor = .white
-                viewButton.layer.borderWidth = 1
-                viewButton.layer.borderColor = UIColor.lightGray.cgColor
-                lblCategory.textColor = .black
-            }
-        }
-        
-        @objc private func buttonTapped() {
-            if let index = index {
-                delegate?.didSelectCategory(at: index)
-            }
-        }
+    }
     
-    func configure(with categoryName: String) {
-           lblCategory.text = categoryName
-       }
-
-        @objc private func buttonTappedProduct() {
-            if let index = index {
-                delegateProduct?.didSelectProductCategory(at: index)
-            }
+    private func updateSelectionStyle() {
+        if isSelected {
+            viewButton.backgroundColor = .orange
+            viewButton.layer.borderWidth = 0
+            lblCategory.textColor = .white
+        } else {
+            viewButton.backgroundColor = .white
+            viewButton.layer.borderWidth = 1
+            viewButton.layer.borderColor = UIColor.lightGray.cgColor
+            lblCategory.textColor = .black
         }
     }
+    
+    @objc private func buttonTapped() {
+        if let index = index {
+            delegate?.didSelectCategory(at: index)
+        }
+    }
+  
+    
+    @objc private func buttonTappedProduct() {
+        if let index = index {
+            delegateProduct?.didSelectProductCategory(at: index)
+        }
+    }
+}
