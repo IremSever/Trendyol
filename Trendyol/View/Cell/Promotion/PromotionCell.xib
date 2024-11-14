@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,9 +20,12 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ign-bG-1X7">
                         <rect key="frame" x="0.0" y="0.0" width="334" height="282"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="u1e-kL-Ekq">
-                                <rect key="frame" x="0.0" y="0.0" width="334" height="27"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="u1e-kL-Ekq">
+                                <rect key="frame" x="0.0" y="0.0" width="334" height="32"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="Asa-96-pLy"/>
+                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BB9-Ms-2FX">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -152,9 +155,12 @@
                                     <constraint firstAttribute="width" constant="90" id="7Bf-Eb-qdY"/>
                                 </constraints>
                             </stackView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="aQT-1m-mMS">
-                                <rect key="frame" x="0.0" y="27" width="334" height="255"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="aQT-1m-mMS">
+                                <rect key="frame" x="0.0" y="32" width="334" height="250"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="njx-a5-Of8"/>
+                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="B3p-WV-wuv">
                                     <size key="itemSize" width="128" height="250"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -190,6 +196,8 @@
             <connections>
                 <outlet property="collectionViewCategory" destination="u1e-kL-Ekq" id="Ezm-1D-8IL"/>
                 <outlet property="collectionViewProduct" destination="aQT-1m-mMS" id="7dN-1B-A70"/>
+                <outlet property="heightCategory" destination="Asa-96-pLy" id="Wk1-wL-rJ0"/>
+                <outlet property="heightProducts" destination="njx-a5-Of8" id="I2c-Ce-vyE"/>
                 <outlet property="lblHour" destination="vK7-Zb-94G" id="dG8-2m-CwN"/>
                 <outlet property="lblMinute" destination="ZMk-Q7-Nqv" id="gtB-No-Kqu"/>
                 <outlet property="lblSeconds" destination="VmX-Lz-6bR" id="pfH-UG-ADO"/>

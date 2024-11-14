@@ -140,6 +140,11 @@ class HomeViewModel {
         let allProducts = getCategories().flatMap { $0.products }
         return allProducts.filter { $0.category == categoryName }
     }
+    func getProductCategories() -> [String] {
+        let categories = getCategories().compactMap { $0.products.first?.category }
+        return Array(Set(categories))
+    }
+
 
     func getErrorMessage() -> String? {
         return errorMessage

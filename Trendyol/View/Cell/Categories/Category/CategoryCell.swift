@@ -20,62 +20,59 @@ class CategoryCell: UICollectionViewCell {
     @IBOutlet weak var lblCategory: UILabel!
     @IBOutlet weak var viewButton: UIButton!
     weak var delegate: CategorySelectionDelegate?
-       weak var delegateProduct: ProductCategorySelectionDelegate?
+        weak var delegateProduct: ProductCategorySelectionDelegate?
 
-       var index: Int?
-         
-       override func awakeFromNib() {
-           super.awakeFromNib()
-           
-           viewButton.layer.cornerRadius = 10
-           viewButton.layer.masksToBounds = true
-           viewButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
-       }
-       
-       func configure(with category: Category, isInitiallySelected: Bool = false) {
-           lblCategory.text = category.name
-           viewBg.backgroundColor = UIColor(hex: category.backgroundColor ?? "") ?? .clear
-           self.isSelected = isInitiallySelected
-           updateSelectionStyle()
+        var index: Int?
+
+        override func awakeFromNib() {
+            super.awakeFromNib()
+            
+            // Setup button appearance and actions
+            viewButton.layer.cornerRadius = 10
+            viewButton.layer.masksToBounds = true
+            viewButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        }
+    
+        func configure(with category: Category, isInitiallySelected: Bool = false) {
+            lblCategory.text = category.name
+            viewBg.backgroundColor = UIColor(hex: category.backgroundColor ?? "") ?? .clear
+            self.isSelected = isInitiallySelected
+            updateSelectionStyle()
+        }
+
+
+        override var isSelected: Bool {
+            didSet {
+                updateSelectionStyle()
+            }
+        }
+        
+        private func updateSelectionStyle() {
+            if isSelected {
+                viewButton.backgroundColor = .orange
+                viewButton.layer.borderWidth = 0
+                lblCategory.textColor = .white
+            } else {
+                viewButton.backgroundColor = .white
+                viewButton.layer.borderWidth = 1
+                viewButton.layer.borderColor = UIColor.lightGray.cgColor
+                lblCategory.textColor = .black
+            }
+        }
+        
+        @objc private func buttonTapped() {
+            if let index = index {
+                delegate?.didSelectCategory(at: index)
+            }
+        }
+    
+    func configure(with categoryName: String) {
+           lblCategory.text = categoryName
        }
 
-       
-       func configure(with product: Product, isInitiallySelected: Bool = false) {
-           lblCategory.text = product.category 
-           self.isSelected = isInitiallySelected
-           updateSelectionStyle()
-       }
-       
-       override var isSelected: Bool {
-           didSet {
-               updateSelectionStyle()
-           }
-       }
-       
-       private func updateSelectionStyle() {
-           if isSelected {
-               viewButton.backgroundColor = .orange
-               viewButton.layer.borderWidth = 0
-               lblCategory.textColor = .white
-           } else {
-               viewButton.backgroundColor = .white
-               viewButton.layer.borderWidth = 1
-               viewButton.layer.borderColor = UIColor.lightGray.cgColor
-               lblCategory.textColor = .black
-           }
-       }
-       
-       @objc private func buttonTapped() {
-           if let index = index {
-               print("Category tapped at index: \(index)")
-               delegate?.didSelectCategory(at: index)
-           }
-       }
-       
-       @objc private func buttonTappedProduct() {
-           if let index = index {
-               print("Product category tapped at index: \(index)")
-               delegateProduct?.didSelectProductCategory(at: index)
-           }
-       }
-   }
+        @objc private func buttonTappedProduct() {
+            if let index = index {
+                delegateProduct?.didSelectProductCategory(at: index)
+            }
+        }
+    }
