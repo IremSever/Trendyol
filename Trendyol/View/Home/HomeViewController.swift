@@ -106,10 +106,10 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                 section = NSCollectionLayoutSection(group: group)
                 section.orthogonalScrollingBehavior = .paging
             case 3:
-                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(270))
+                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(312))
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
                 item.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 8, bottom: 0, trailing: 8)
-                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(270))
+                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(312))
                 let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
                 
                 section = NSCollectionLayoutSection(group: group)
@@ -122,9 +122,9 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                 section = NSCollectionLayoutSection(group: group)
                 //-------------------------------
             case 5:
-                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(240))
+                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(280))
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
-                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(240))
+                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(280))
                 let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
                 section = NSCollectionLayoutSection(group: group)
                 section.orthogonalScrollingBehavior = .continuous
@@ -318,7 +318,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
 //    }
 //    
     func loadProductForSelectedCategory(index: Int, animated: Bool = true) {
-        viewModel.setSelectedCategoryIndex(index) 
+        viewModel.setSelectedCategoryIndex(index)
         if animated {
             let direction: CGFloat = index > selectedCategoryIndex ? 1 : -1
             let originalTransform = collectionView.transform

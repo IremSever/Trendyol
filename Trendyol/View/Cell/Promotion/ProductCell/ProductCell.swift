@@ -12,7 +12,8 @@ class ProductCell: UICollectionViewCell {
     @IBOutlet weak var lblReviews: UILabel!
     @IBOutlet weak var lblRating: UILabel!
     
-    @IBOutlet var imgStars: [UIImageView]!
+    
+    @IBOutlet weak var stackViewStar: UIStackView!
     @IBOutlet weak var lblPrice: UILabel!
     @IBOutlet weak var lblProduct: UILabel!
     @IBOutlet weak var imgProduct: UIImageView!
@@ -40,18 +41,20 @@ class ProductCell: UICollectionViewCell {
         lblReviews.text = "(\(String(product.reviewsCount)))"
         
     }
+    
     func configureStars(rating: Double) {
-   
-        for (index, star) in imgStars.enumerated() {
-            let starIndex = Double(index + 1)
-            if rating >= starIndex {
-                star.image = UIImage(named: "star_filled")
-            } else if rating >= starIndex - 0.5 {
-                star.image = UIImage(named: "star_half_filled")
-            } else {
-                star.image = UIImage(named: "star_empty")
+        for (index, view) in stackViewStar.arrangedSubviews.enumerated() {
+            if let star = view as? UIImageView {
+                let starIndex = Double(index + 1)
+                
+                if rating >= starIndex {
+                    star.image = UIImage(systemName: "star.fill")
+                } else if rating >= starIndex - 0.5 {
+                    star.image = UIImage(systemName: "star.leadinghalf.filled")
+                } else {
+                    star.image = UIImage(systemName: "star")
+                }
             }
         }
     }
-
 }
