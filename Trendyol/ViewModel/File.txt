@@ -1,0 +1,6 @@
+func getBrandProducts(for category: String) -> [Product] {
+    let allProducts = getCategories()
+        .filter { $0.name == category } // Kategoriye göre filtreleme
+        .flatMap { $0.products }
+    return allProducts.filter { !$0.brand.isEmpty } // Markası dolu olanları al
+}

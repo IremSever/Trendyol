@@ -118,19 +118,20 @@ class HomeViewModel {
         let allProducts = getCategories().flatMap { $0.products }
         return allProducts.filter { $0.isPromotion }
     }
-    
-    func getProductsGroupedByCategory(categoryName: String) -> [Product] {
-        let allProducts = getCategories().flatMap { $0.products }
-        return allProducts.filter { $0.category == categoryName }
-    }
-    
+ 
     func getFlashSaleProducts() -> [Product] {
         let allProducts = getCategories().flatMap { $0.products }
         return allProducts.filter { $0.flashSale }
     }
+    func getBrandProducts(for category: String) -> [Product] {
+        let allProducts = getCategories()
+            .filter { $0.name == category }
+            .flatMap { $0.products }
+        return allProducts.filter { !$0.brand.isEmpty } 
+    }
     func getFavoriteExculisive() -> [Product] {
         let allProducts = getCategories().flatMap { $0.products }
-        return allProducts.filter { $0.favoriteExclusive == true }
+        return allProducts.filter { $0.favoriteExclusive }
     }
     func getPreviouslyViewedProducts() -> [Product] {
         let allProducts = getCategories().flatMap { $0.products }
@@ -140,12 +141,17 @@ class HomeViewModel {
         let allProducts = getCategories().flatMap { $0.products }
         return allProducts.filter { $0.category == categoryName }
     }
+    
     func getProductCategories() -> [String] {
         let categories = getCategories().compactMap { $0.products.first?.category }
         return Array(Set(categories))
     }
-
-
+    
+    func getProductsGroupedByCategory(categoryName: String) -> [Product] {
+        let allProducts = getCategories().flatMap { $0.products }
+        return allProducts.filter { $0.category == categoryName }
+    }
+    
     func getErrorMessage() -> String? {
         return errorMessage
     }

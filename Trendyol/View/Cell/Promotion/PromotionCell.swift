@@ -9,6 +9,7 @@ import UIKit
 
 class PromotionCell: UICollectionViewCell, UICollectionViewDataSource, UICollectionViewDelegate, ProductCategorySelectionDelegate {
     private var viewModel = HomeViewModel()
+    @IBOutlet weak var titleCell: UILabel!
     @IBOutlet weak var collectionViewProduct: UICollectionView!
     @IBOutlet weak var lblSeconds: UILabel!
     @IBOutlet weak var lblMinute: UILabel!
@@ -29,23 +30,28 @@ class PromotionCell: UICollectionViewCell, UICollectionViewDataSource, UICollect
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        setupCollectionViews()
         loadData()
     }
     
-    func loadData() {
+    private func setupCollectionViews() {
         collectionViewProduct.dataSource = self
         collectionViewProduct.delegate = self
         collectionViewCategory.dataSource = self
         collectionViewCategory.delegate = self
         
-        registerCell()
-        
-        viewModel.loadHomeData {
-            self.collectionViewCategory.reloadData()
-            self.collectionViewProduct.reloadData()
-            self.updateVisibilityBasedOnConditions()
-            if self.isFlashProduct {
-                self.startTimer()
+         registerCell()
+    }
+    func loadData() {
+        viewModel.loadHomeData { [weak self] in
+            DispatchQueue.main.async {
+                self?.collectionViewCategory.reloadData()
+                self?.collectionViewProduct.reloadData()
+                self?.updateVisibilityBasedOnConditions()
+                if ((self?.isFlashProduct) != nil) {
+                    self?.startTimer()
+                }
+                self?.didSelectProductCategory(at: 0)
             }
         }
     }
@@ -54,10 +60,18 @@ class PromotionCell: UICollectionViewCell, UICollectionViewDataSource, UICollect
         collectionViewCategory.register(UINib(nibName: "CategoryCell", bundle: nil), forCellWithReuseIdentifier: "CategoryCell")
         collectionViewProduct.register(UINib(nibName: "ProductCell", bundle: nil), forCellWithReuseIdentifier: "ProductCell")
     }
-    
     func updateVisibilityBasedOnConditions() {
+        if isFlashProduct {
+            titleCell.text = "Flaş Ürünler"
+            titleCell.isHidden = false
+        } else if isPromotion {
+            titleCell.text = "Promosyonlu Ürünler"
+            titleCell.isHidden = false
+        } else {
+            titleCell.isHidden = true
+        }
+
         viewStackTimer.isHidden = !isFlashProduct
-        
         collectionViewCategory.isHidden = !isPromotion || isFlashProduct
         heightCategory.constant = isPromotion ? 32 : 0
         heightProducts.constant = isPromotion ? 288 : 312
@@ -84,7 +98,6 @@ class PromotionCell: UICollectionViewCell, UICollectionViewDataSource, UICollect
             timer?.invalidate()
             timer = nil
             remainingTime = 0
-            print("Flash product timer finished")
         }
     }
     
@@ -132,18 +145,21 @@ class PromotionCell: UICollectionViewCell, UICollectionViewDataSource, UICollect
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCell", for: indexPath) as! ProductCell
             var product: Product
-            
+            cell.layer.cornerRadius = 20
+            cell.layer.borderWidth = 0.5
+            cell.layer.borderColor = UIColor.lightGray.cgColor
+            cell.layer.masksToBounds = true
             if isFlashProduct {
-                heightProducts.constant = 288
+                heightProducts.constant = 280
                 product = viewModel.getFlashSaleProducts()[indexPath.row]
             } else if isPromotion {
-                heightProducts.constant = 288
+                heightProducts.constant = 280
                 product = viewModel.getPromotionalProducts()[indexPath.row]
             } else if isPreviouslyViewed {
-                heightProducts.constant = 320
+                heightProducts.constant = 312
                 product = viewModel.getPreviouslyViewedProducts()[indexPath.row]
             } else {
-                heightProducts.constant = 320
+                heightProducts.constant = 312
                 product = viewModel.getSelectedCategoryProducts()[indexPath.row]
             }
             
@@ -153,9 +169,16 @@ class PromotionCell: UICollectionViewCell, UICollectionViewDataSource, UICollect
     }
 
     func didSelectProductCategory(at index: Int) {
+        
         selectedCategoryIndex = index
+        viewModel.setSelectedCategoryIndex(index)
+        
         collectionViewProduct.reloadData()
+        
         let indexPath = IndexPath(item: index, section: 0)
         collectionViewCategory.selectItem(at: indexPath, animated: true, scrollPosition: [])
+   
     }
+ 
+ 
 }

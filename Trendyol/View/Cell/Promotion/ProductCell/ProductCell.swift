@@ -8,10 +8,9 @@
 import UIKit
 
 class ProductCell: UICollectionViewCell {
-   
+    
     @IBOutlet weak var lblReviews: UILabel!
     @IBOutlet weak var lblRating: UILabel!
-    
     
     @IBOutlet weak var stackViewStar: UIStackView!
     @IBOutlet weak var lblPrice: UILabel!
@@ -20,7 +19,7 @@ class ProductCell: UICollectionViewCell {
     @IBOutlet weak var viewBg: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
-     
+        
     }
     
     func configure(with product: Product) {
@@ -35,7 +34,7 @@ class ProductCell: UICollectionViewCell {
             imgProduct.image = UIImage(named: "default_product_image")
         }
         
-        imgProduct.layer.cornerRadius = 30
+        imgProduct.layer.cornerRadius = 10
         imgProduct.layer.masksToBounds = true
         lblRating.text = String(product.rating)
         lblReviews.text = "(\(String(product.reviewsCount)))"

@@ -62,7 +62,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             
             let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.20), heightDimension: .absolute(25))
             let item = NSCollectionLayoutItem(layoutSize: itemSize)
-            item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8)
+            item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 0)
             
             let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(30))
             let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item, count: 5)
@@ -106,10 +106,10 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                 section = NSCollectionLayoutSection(group: group)
                 section.orthogonalScrollingBehavior = .paging
             case 3:
-                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(312))
+                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(300))
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
-                item.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 8, bottom: 0, trailing: 8)
-                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(312))
+                item.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 0, bottom: 0, trailing: 0)
+                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(300))
                 let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
                 
                 section = NSCollectionLayoutSection(group: group)
@@ -120,8 +120,32 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                 let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(80))
                 let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item, count: 2)
                 section = NSCollectionLayoutSection(group: group)
-                //-------------------------------
             case 5:
+                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(288))
+                let item = NSCollectionLayoutItem(layoutSize: itemSize)
+                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(288))
+                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+                section = NSCollectionLayoutSection(group: group)
+                section.orthogonalScrollingBehavior = .continuous
+               
+            case 6:
+                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(280))
+                let item = NSCollectionLayoutItem(layoutSize: itemSize)
+                item.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 0, bottom: 0, trailing: 0)
+                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(280))
+                let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
+                section = NSCollectionLayoutSection(group: group)
+                section.orthogonalScrollingBehavior = .continuous
+             
+            case 7:
+                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(312))
+                let item = NSCollectionLayoutItem(layoutSize: itemSize)
+                item.contentInsets = NSDirectionalEdgeInsets(top: 08, leading: 0, bottom: 8, trailing: 0)
+                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(312))
+                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+                section = NSCollectionLayoutSection(group: group)
+                
+            case 8:
                 let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(280))
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
                 let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(280))
@@ -129,33 +153,10 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                 section = NSCollectionLayoutSection(group: group)
                 section.orthogonalScrollingBehavior = .continuous
                 
-            case 6:
-                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(100))
-                let item = NSCollectionLayoutItem(layoutSize: itemSize)
-                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(350))
-                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-                section = NSCollectionLayoutSection(group: group)
-                section.orthogonalScrollingBehavior = .continuous
-                
-            case 7:
-                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(350))
-                let item = NSCollectionLayoutItem(layoutSize: itemSize)
-                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(350))
-                let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
-                section = NSCollectionLayoutSection(group: group)
-                
-            case 8:
-                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(350))
-                let item = NSCollectionLayoutItem(layoutSize: itemSize)
-                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(350))
-                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-                section = NSCollectionLayoutSection(group: group)
-                section.orthogonalScrollingBehavior = .continuous
-                
             case 9:
-                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(350))
+                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(280))
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
-                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(350))
+                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(2800))
                 let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
                 section = NSCollectionLayoutSection(group: group)
                 section.orthogonalScrollingBehavior = .continuous
@@ -179,9 +180,9 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             case 1: return viewModel.getServices().count
             case 2, 3: return 1 /*viewModel.getBanners().count*/
             case 4: return viewModel.getCoupons().count
-            case 5: return 1
-//                let selectedCategory = viewModel.getCategories()[selectedCategoryIndex]
-//                return viewModel.getProductsGroupedByCategory(categoryName: selectedCategory.name ?? "").count
+            case 5, 6: return 1
+            case 7, 8, 9: return 1
+            
            
             default: return 1
                 
@@ -222,7 +223,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             case 2:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BannerCell", for: indexPath) as! BannerCell
                 let banner = viewModel.bannerCellForRowAt(indexPath: indexPath)
-                cell.configure(with: banner)
+                cell.configureBan(with: banner)
                 return cell
             case 3:
                 let flashProducts = viewModel.getFlashSaleProducts()
@@ -234,6 +235,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                 if let product = product {
                     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PromotionCell", for: indexPath) as! PromotionCell
                     cell.configure(with: product)
+                    addGradientToCell(cell, colors: [UIColor.orange.withAlphaComponent(0.7).cgColor, UIColor.white.cgColor])
                     return cell
                 } else {
                     return UICollectionViewCell()
@@ -245,39 +247,68 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                 return cell
                 
             case 5:
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PromotionCell", for: indexPath) as! PromotionCell
                 let promotionalProducts = viewModel.getPromotionalProducts()
                 guard indexPath.row < promotionalProducts.count else {
                     print("Invalid index for promotional products.")
                     return UICollectionViewCell()
                 }
-                product = promotionalProducts[indexPath.row]
-                //-------------------------------
+                let product = promotionalProducts[indexPath.row]
+                cell.configure(with: product)
+                addGradientToCell(cell, colors: [UIColor.purple.withAlphaComponent(1).cgColor, UIColor.white.cgColor])
+                return cell
+                
                 
             case 6:
-                let productsInBrand = viewModel.getGroupedProductsByBrand()
-                guard indexPath.row < productsInBrand.count, let firstProduct = productsInBrand[indexPath.row].first else {
-                    print("No products available in this brand.")
-                    return UICollectionViewCell()
-                }
-                product = firstProduct
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BannerCell", for: indexPath) as! BannerCell
+                let categoryName = "Men"
+                let brandProducts = viewModel.getBrandProducts(for: categoryName)
                 
+                if let brandProduct = brandProducts.first {
+                    cell.configureBrand(with: brandProduct)
+                } else {
+                    cell.configureDefault()
+                }
+                return cell
+
             case 7:
-                let promotionalProducts = viewModel.getPromotionalProducts()
-                guard indexPath.row < promotionalProducts.count else {
-                    print("Invalid index for promotional products.")
-                    return UICollectionViewCell()
-                }
-                product = promotionalProducts[indexPath.row]
-                //-------------------------------
+                guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PromotionCell", for: indexPath) as? PromotionCell else {
+                       fatalError("PromotionCell is not registered or incorrectly configured.")
+                   }
+                   let favoriteProducts = viewModel.getFavoriteExculisive()
+                   
+                   guard indexPath.row < favoriteProducts.count else {
+                       print("Invalid index for promotional products.")
+                       return UICollectionViewCell()
+                   }
+                   
+                   let product = favoriteProducts[indexPath.row]
+                   cell.configure(with: product)
+                   
+                   return cell
+            case 8:
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BannerCell", for: indexPath) as! BannerCell
+                let categoryName = "Women"
+                let brandProducts = viewModel.getBrandProducts(for: categoryName)
                 
-            case 8, 9:
-                let promotionalProducts = viewModel.getPromotionalProducts()
-                guard indexPath.row < promotionalProducts.count else {
-                    print("Invalid index for promotional products.")
-                    return UICollectionViewCell()
+                if let brandProduct = brandProducts.last {
+                    cell.configureBrand(with: brandProduct)
+                } else {
+                    cell.configureDefault()
                 }
-                product = promotionalProducts[indexPath.row]
-            
+                return cell
+            case 9:
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BannerCell", for: indexPath) as! BannerCell
+                let categoryName = "Men"
+                let brandProducts = viewModel.getBrandProducts(for: categoryName)
+                
+                if let brandProduct = brandProducts.first {
+                    cell.configureBrand(with: brandProduct)
+                } else {
+                    cell.configureDefault()
+                }
+                return cell
+
                 
             default:
                 fatalError("Unexpected section in collectionView.")
@@ -296,27 +327,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             }
         }
     }
-    
-//    
-//    
-//    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-//        if kind == UICollectionView.elementKindSectionHeader {
-//            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "CategoryHeaderView", for: indexPath) as! CategoryHeaderCell
-//            switch indexPath.section {
-//            case 0:
-//                header.lblHeader.text = "Kategoriye Göre Ürünler"
-//            case 1:
-//                header.lblHeader.text = "Markaya Göre Ürünler"
-//            case 2:
-//                header.lblHeader.text = "Promosyonlar"
-//            default:
-//                break
-//            }
-//            return header
-//        }
-//        return UICollectionReusableView()
-//    }
-//    
+
     func loadProductForSelectedCategory(index: Int, animated: Bool = true) {
         viewModel.setSelectedCategoryIndex(index)
         if animated {
@@ -349,4 +360,18 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
 
         loadProductForSelectedCategory(index: index)
     }
+    
+    private func addGradientToCell(_ cell: UICollectionViewCell, colors: [CGColor]) {
+            
+        cell.contentView.layer.sublayers?.removeAll(where: { $0 is CAGradientLayer })
+            
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = colors
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 0.1, y: 0.8)
+        gradientLayer.frame = cell.contentView.bounds
+            
+        cell.contentView.layer.insertSublayer(gradientLayer, at: 0)
+        }
+    
 }

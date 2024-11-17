@@ -39,6 +39,7 @@ struct Product: Codable {
     let promotionPrice: Double
     let category: String
     let brand: String
+    let brandImg: String
     let rating: Double
     let reviewsCount: Int
     let stockStatus: StockStatus

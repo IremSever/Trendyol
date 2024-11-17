@@ -25,4 +25,21 @@ class BannerCell: UICollectionViewCell {
         imgBanner.layer.masksToBounds = true
     }
     
+    func configureBan(with banner: Banner) {
+        
+        imgBanner.image = UIImage(named: "banner3")
+        
+        imgBanner.layer.cornerRadius = 10
+        imgBanner.layer.masksToBounds = true
+    }
+    
+    func configureBrand(with brand: Product) {
+        imgBanner.layer.cornerRadius = 0
+        imgBanner.layer.masksToBounds = true
+        imgBanner.image = UIImage(named: brand.brandImg)
+    }
+    
+    func configureDefault() {
+        imgBanner.image = UIImage(named: "default_banner")
+    }
 }
